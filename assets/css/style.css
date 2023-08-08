@@ -1,2 +1,265 @@
 @import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Oswald&family=Source+Sans+3:wght@300&display=swap');
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  margin: 40px 0 20px 0;
+}
+
+#logo {
+  position: relative;
+  -webkit-animation: myfirst 5s linear 2s; /* Safari 4.0 - 8.0 */
+  animation: myfirst 5s linear 2s infinite alternate;
+  animation-iteration-count: 1
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes myfirst {
+  0%   {left:0px; top:0px;}
+  50%  {left:0px; top:10px;}
+  100% {left:0px; top:20px;}
+}
+
+.ocean {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(0deg, #182848, #2980b9);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+}
+
+
+.bubble {
+  width: 30px;
+  height: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 100%;
+  position: absolute;
+  background-color: white;
+  bottom: -30px;
+  opacity: 0.2;
+  animation: bubble 15s ease-in-out infinite,
+    sideWays 4s ease-in-out infinite alternate;
+}
+
+
+@keyframes bubble {
+  0% {
+    transform: translateY(0%);
+    opacity: 0.06;
+  }
+  100% {
+    transform: translateY(-120vh);
+  }
+}
+
+
+@keyframes sideWays {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: 200px;
+  }
+}
+
+
+.bubble--1 {
+  left: 10%;
+  animation-delay: 0.5s;
+  animation-duration: 16s;
+  opacity: 0.2;
+  display: flex;
+  display: flex;  
+  flex-wrap: wrap;
+  padding-top: 5px;
+  padding-bottom: 5px;
+ 
+}
+
+
+.bubble--2 {
+  width: 15px;
+  height: 15px;
+  left: 20%;
+  animation-delay: 1s;
+  animation-duration: 10s;
+  opacity: 0.1;
+}
+
+
+.bubble--3 {
+  width: 10px;
+  height: 10px;
+  left: 30%;
+  animation-delay: 5s;
+  animation-duration: 20s;
+  opacity: 0.3;
+ 
+}
+
+
+.bubble--4 {
+  width: 25px;
+  height: 25px;
+  left: 40%;
+  animation-delay: 8s;
+  animation-duration: 15s;
+  opacity: 0.2;
+  display: flex;  
+  flex-wrap: wrap;
+  padding-top: 3px;
+  padding-bottom: 3px;
+
+
+}
+
+
+.bubble--5 {
+  width: 30px;
+  height: 30px;
+  left: 40%;
+  animation-delay: 10s;
+  animation-duration: 15s;
+  opacity: 0.1;
+  display: flex;  
+  flex-wrap: wrap;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+
+.bubble--6 {
+  width: 10px;
+  height: 10px;
+  left: 80%;
+  animation-delay: 3s;
+  animation-duration: 30s;
+  opacity: 0.2;
+  display: flex;  
+  flex-wrap: wrap;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+
+.bubble--7 {
+  width: 20px;
+  height: 20px;
+  left: 90%;
+  animation-delay: -7s;
+  animation-duration: 25s;
+  opacity: 0.3;
+  display: flex;  
+  flex-wrap: wrap;
+  padding-top: 1px;
+  padding-bottom: 1px;
+
+
+}
+
+
+.bubble--8 {
+  width: 30px;
+  height: 30px;
+  left: 70%;
+  bottom: 30px;
+  animation-delay: -13.75s;
+  animation-duration: 20s;
+  opacity: 0.2;
+  display: flex;  
+  flex-wrap: wrap;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+
+.bubble--9 {
+  width: 20px;
+  height: 20px;
+  left: 10%;
+  bottom: 30px;
+  animation-delay: -5s;
+  animation-duration: 19s;
+  opacity: 0.2;
+  display: flex;  
+  flex-wrap: wrap;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+
+.bubble--10 {
+  width: 40px;
+  height: 40px;
+  left: 20%;
+  bottom: 30px;
+  animation-delay: -21s;
+  animation-duration: 16s;
+  opacity: 0.3;
+  display: flex;  
+  flex-wrap: wrap;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+.bubble--11 {
+  width: 30px;
+  height: 30px;
+  left: 90%;
+  bottom: 30px;
+  animation-delay: -13.75s;
+  animation-duration: 20s;
+  opacity: 0.1;
+  display: flex;  
+  flex-wrap: wrap;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+
+.bubble--12 {
+  width: 25px;
+  height: 25px;
+  left: 80%;
+  bottom: 30px;
+  animation-delay: -10.5s;
+  animation-duration: 19s;
+  opacity: 0.3;
+  display: flex;  
+  flex-wrap: wrap;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+
+.bubble--13 {
+  width: 20px;
+  height: 20px;
+  left: 70%;
+  bottom: 30px;
+  animation-delay: -15.5s;
+  animation-duration: 18s;
+  opacity: 0.2;
+  display: flex;  
+  flex-wrap: wrap;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
