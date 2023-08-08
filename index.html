@@ -18,7 +18,10 @@
   <link rel="stylesheet" href="assets/css/style.css">
     <title>Math with Crab</title>
   </head>
-  <body>
+
+  <!-- The idea for the body background was taken from https://codepen.io/codypearce/pen/VwYOGzq -->
+  <!-- Some changes was make to adopt buttons for the game need -->
+  <body class="ocean">
     <header class="header">
       <div id="logo">
         <img id="logo-image" src="assets/images/crab-logo.png" alt=""/>
@@ -51,7 +54,7 @@
         </div>
 
         <!-- Timer -->
-        <p id="time-display" hidden><i class="fa-solid fa-hourglass-start"></i> Time left: 10</p>
+        <p id="time-display"><i class="fa-solid fa-hourglass-start"></i> Time left: 10</p>
 
         <!-- Question area-->
         <h3 id="question">What is the correct answer? Do your know?</h3>
@@ -62,12 +65,13 @@
         <button id="btn2">0</button>
         <button id="btn3">0</button>
         <button id="btn4">0</button>
+        <br>
 
         <!-- Area with the buttons: button to Start and button to Reset-->
         <!-- Start button -->
         <button onclick="startGame()">Start</button>
         <!-- Reset button -->
-        <button id="new-game"></button>
+        <button id="new-game">New game</button>
 
       </div>
         <!-- Score area -->
@@ -75,6 +79,43 @@
         <p id="high-score">High Score: 0</p>
         <p id="current-score">Current Score: 0</p>
         </div>
+    </div>
+      
+    <!-- Bubbles animation for background -->
+    <!-- Link to source website: https://codepen.io/codypearce/pen/VwYOGzq -->
+    <div class="bubble bubble--1">
+      <p class="number">2</p>
+    </div>
+    <div class="bubble bubble--2"></div>
+    <div class="bubble bubble--3"></div>
+    <div class="bubble bubble--4">
+      <p class="number">5</p>
+    </div>
+    <div class="bubble bubble--5">
+      <p class="number">6</p>
+    </div>
+    <div class="bubble bubble--6">
+    </div>
+    <div class="bubble bubble--7">
+      <p class="number">9</p>
+    </div>
+    <div class="bubble bubble--8">
+      <p class="number">8</p>
+    </div>
+    <div class="bubble bubble--9">
+      <p class="number">3</p>
+    </div>
+    <div class="bubble bubble--10">
+      <p class="number">10</p>
+    </div>
+    <div class="bubble bubble--11">
+      <p class="number">4</p>
+    </div>
+    <div class="bubble bubble--12">
+      <p class="number">7</p>
+    </div>
+    <div class="bubble bubble--13">
+      <p class="number">1</p>
     </div>
 
       <!-- Modal window for rules -->
