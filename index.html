@@ -51,7 +51,23 @@
         </div>
 
         <!-- Timer -->
-        <p id="time-display">Time left: 10</p>
+        <p id="time-display" hidden><i class="fa-solid fa-hourglass-start"></i> Time left: 10</p>
+
+        <!-- Question area-->
+        <h3 id="question">What is the correct answer? Do your know?</h3>
+        <p id="operation">0 + 0</p>
+
+        <!-- Area for 4 Buttons with answers -->
+        <button id="btn1">0</button>
+        <button id="btn2">0</button>
+        <button id="btn3">0</button>
+        <button id="btn4">0</button>
+
+        <!-- Area with the buttons: button to Start and button to Reset-->
+        <!-- Start button -->
+        <button onclick="startGame()">Start</button>
+        <!-- Reset button -->
+        <button id="new-game"></button>
 
       </div>
         <!-- Score area -->
@@ -71,8 +87,8 @@
         <p class="instructions-element">You will see the addition of two numbers.</p>
         <p class="instructions-element">I will give you 4 possible answers.</p>
         <p class="instructions-element">These will be 4 buttons with the answers on it</p>
-        <p class="instructions-element">If you know the correct answer, click fast on it because the time goes!</p>
-        <p class="instructions-element">I will guide you if the answer is incorrect.</p>
+        <p class="instructions-element">If you know the correct answer, click fast on itand carry on because the time goes!</p>
+        <p class="instructions-element">You will get no score if the answer is incorrect.</p>
         <p class="instructions-element">It can happen that you do not know the answer and do not want to give a guess.</p>
         <p class="instructions-element">In this case just click on the Reset button.</p>
         <p class="instructions-element">See you in the game!</p> 
