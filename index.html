@@ -30,17 +30,25 @@
     </header>
 
     <div id="game-area">
-
-
-      <div id="score-area">
+      <!-- Main screen with greeting and user (child) login -->
+      <div id="get-name">
+          <h2 id="child-name"></h2>
+        <div id="user-input">
+          <label for="user">Hi, I'm Bob.<br>What's your name?</label>
+          <br>
+          <input type="text" id="child" name="child" maxlength=10>
+        </div>
+        <button data-type="" id="submit-btn">Play with me</button>
+        
+          <p class="user-log-error" id="error-message">
+            Please try again. <br>Username must be between 1 and 10 characters.
+            </p>
+      </div>
+        <div id="score-area">
         <p id="high-score">High Score: 0</p>
         <p id="current-score">Current Score: 0</p>
-
-      </div>
-
+        </div>
     </div>
-
-
 
 
 
