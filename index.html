@@ -30,6 +30,7 @@
     </header>
 
     <div id="game-area">
+
       <!-- Main screen with greeting and user (child) login -->
       <div id="get-name">
           <h2 id="child-name"></h2>
@@ -43,16 +44,42 @@
           <p class="user-log-error" id="error-message">
             Please try again. <br>Username must be between 1 and 10 characters.
             </p>
+
+        <!--Rules Button-->
+        <div class="button__instructions" id="button__instructions">
+        <button class="btn__navigation--back" aria-label="go to contact modal"><i class="fa-solid fa-question"></i></i></button>
+        </div>
+
+        <!-- Timer -->
+        <p id="time-display">Time left: 10</p>
+
       </div>
+        <!-- Score area -->
         <div id="score-area">
         <p id="high-score">High Score: 0</p>
         <p id="current-score">Current Score: 0</p>
         </div>
     </div>
 
-
-
-
+      <!-- Modal window for rules -->
+    <aside class="modal modal--hidden" id="modal">
+      <button class="close-modal" id="close-modal">&times;</button>
+      <div class="modal-instructions">
+        <h2 id="child-name-rule"></h2>
+        <p class="instructions-element">please read these rules before you start to play.</p>
+        <p class="instructions-element">Click on the Start button if you want to play with me.</p>
+        <p class="instructions-element">You will see the addition of two numbers.</p>
+        <p class="instructions-element">I will give you 4 possible answers.</p>
+        <p class="instructions-element">These will be 4 buttons with the answers on it</p>
+        <p class="instructions-element">If you know the correct answer, click fast on it because the time goes!</p>
+        <p class="instructions-element">I will guide you if the answer is incorrect.</p>
+        <p class="instructions-element">It can happen that you do not know the answer and do not want to give a guess.</p>
+        <p class="instructions-element">In this case just click on the Reset button.</p>
+        <p class="instructions-element">See you in the game!</p> 
+      </div>
+    </aside>
+    <div class="overlay overlay--hidden" id="overlay"></div>
+  
     <!-- Link to FontAwesome icons -->
     <script src="https://kit.fontawesome.com/4bd19f25b4.js" crossorigin="anonymous"></script>
     <!-- Script to js file -->
