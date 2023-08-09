@@ -21,7 +21,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  font-family: 'Source Sans 3', cursive;
+  font-family: 'Source-Sans-3', cursive;
 
 }
 
@@ -31,7 +31,7 @@
 img {
   width: 80px;
   height: 80px;
-  margin: 40px 0 0 0;
+  margin: 25px 0 0 0;
 }
 
 #logo {
@@ -40,8 +40,7 @@ img {
   animation-iteration-count: 1
 }
 
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes myfirst {
+@keyframes myfirst {
   0%   {left:0px; top:0px;}
   50%  {left:0px; top:10px;}
   100% {left:0px; top:20px;}
@@ -84,7 +83,7 @@ img {
 #game-area {
 background-color: #B8B8B8;
 box-sizing: border-box;
-width: 40%;
+width: 30%;
 height: 100vh;
 max-height: 450px;
 max-width: 600px;
@@ -96,16 +95,23 @@ border-radius: 10px;
 
 }
 
+h3 {
+  color: #7fff00;
+  font-family: 'Source-Sans-3', cursive;
+  font-weight: bold;
+}
+
 /* Add style to Play with me button and Start button */
 /* Code war taken and added from https://webdeasy.de/top-css-buttons/ */
 .pink-btn {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Sans-Source-3', sans-serif;
   display: inline-block;
   font-size: 1em;
+  font-weight: normal;
   padding: 0.5em 0.8em;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  -webkit-appearance: none;
+  margin: 20px 10px 20px 10px;
+  margin-left: 
+  -webkit-appearance none;
   appearance: none;
   background-color: #ff0081;
   color: #fff;
@@ -172,7 +178,7 @@ border-radius: 10px;
   
 }
 
-
+/* Swimming bubbles for ocean */
 .bubble {
   width: 30px;
   height: 30px;
@@ -206,6 +212,9 @@ border-radius: 10px;
   }
 }
 
+.fa-hourglass-start {
+  color:  #e00000;
+}
 .bubble--1 {
   left: 10%;
   animation-delay: 0.5s;
@@ -236,7 +245,6 @@ border-radius: 10px;
   animation-duration: 20s;
   opacity: 0.3;
 }
-
 
 .bubble--4 {
   width: 25px;
