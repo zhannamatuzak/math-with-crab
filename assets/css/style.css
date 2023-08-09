@@ -8,26 +8,6 @@
   box-sizing: border-box;
 }
 
-img {
-  width: 100px;
-  height: 100px;
-  margin: 40px 0 20px 0;
-}
-
-#logo {
-  position: relative;
-  -webkit-animation: myfirst 5s linear 2s; /* Safari 4.0 - 8.0 */
-  animation: myfirst 5s linear 2s infinite alternate;
-  animation-iteration-count: 1
-}
-
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes myfirst {
-  0%   {left:0px; top:0px;}
-  50%  {left:0px; top:10px;}
-  100% {left:0px; top:20px;}
-}
-
 .ocean {
   position: relative;
   padding: 0;
@@ -42,6 +22,74 @@ img {
   text-align: center;
 
 }
+
+img {
+  width: 100px;
+  height: 100px;
+  margin: 40px 0 0 0;
+}
+
+#logo {
+  position: relative;
+  animation: myfirst ease 5s;
+  animation-iteration-count: 1
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes myfirst {
+  0%   {left:0px; top:0px;}
+  50%  {left:0px; top:10px;}
+  100% {left:0px; top:20px;}
+}
+
+
+/* Color gradient to header title */
+/* THe idea was borrowed from Aleksandra.H PP2 "Sunshine guessing game" */
+#header-title {
+    padding: 5px 0 2px 0;
+    background: #FCEABB;
+    background: -webkit-repeating-linear-gradient(to right, #FCEABB 24%, #FCCD4D 13%, #F8B500 41%, #FBDF93 71%);
+    background: -moz-repeating-linear-gradient(to right, #FCEABB 24%, #FCCD4D 13%, #F8B500 41%, #FBDF93 71%);
+    background: repeating-linear-gradient(to right, #FCEABB 24%, #FCCD4D 13%, #F8B500 41%, #FBDF93 71%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Irish Grover', cursive;
+    animation: fadeInAnimation ease 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+.header-hint {
+  color: #00202e;
+  margin-bottom: 20px;
+  font-family: cursive;
+  color: #ff0081;
+
+}
+
+#game-area {
+background-color: #B8B8B8;
+box-sizing: border-box;
+width: 40%;
+height: 100vh;
+max-height: 450px;
+max-width: 600px;
+margin-left: auto;
+margin-right: auto;
+padding: 1%;
+opacity: 0.4;
+border-radius: 10px;
+}
+
 
 
 .bubble {

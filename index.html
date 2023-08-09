@@ -27,8 +27,8 @@
         <img id="logo-image" src="assets/images/crab-logo.png" alt=""/>
       </div>
       <div>
-        <h1 class="header-title">Math with Crab</h1>
-        <p class="header-hint">Add & Substract with numbers to 10!</p>
+        <h1 id="header-title">Math with Crab</h1>
+        <p class="header-hint">Learn adding numbers to 10!</p>
       </div>
     </header>
 
@@ -42,15 +42,16 @@
           <br>
           <input type="text" id="child" name="child" maxlength=10>
         </div>
+      </div>
         <button data-type="" id="submit-btn">Play with me</button>
         
           <p class="user-log-error" id="error-message">
             Please try again. <br>Username must be between 1 and 10 characters.
-            </p>
+          </p>
 
         <!--Rules Button-->
         <div class="button__instructions" id="button__instructions">
-        <button class="btn__navigation--back" aria-label="go to contact modal"><i class="fa-solid fa-question"></i></i></button>
+          <button class="btn__navigation--back" aria-label="go to contact modal"><i class="fa-solid fa-question"></i></i></button>
         </div>
 
         <!-- Timer -->
@@ -72,51 +73,50 @@
         <button onclick="startGame()">Start</button>
         <!-- Reset button -->
         <button id="new-game">New game</button>
-
-      </div>
-        <!-- Score area -->
-        <div id="score-area">
-        <p id="high-score">High Score: 0</p>
-        <p id="current-score">Current Score: 0</p>
-        </div>
     </div>
       
-    <!-- Bubbles animation for background -->
-    <!-- Link to source website: https://codepen.io/codypearce/pen/VwYOGzq -->
-    <div class="bubble bubble--1">
-      <p class="number">2</p>
-    </div>
-    <div class="bubble bubble--2"></div>
-    <div class="bubble bubble--3"></div>
-    <div class="bubble bubble--4">
-      <p class="number">5</p>
-    </div>
-    <div class="bubble bubble--5">
-      <p class="number">6</p>
-    </div>
-    <div class="bubble bubble--6">
-    </div>
-    <div class="bubble bubble--7">
-      <p class="number">9</p>
-    </div>
-    <div class="bubble bubble--8">
-      <p class="number">8</p>
-    </div>
-    <div class="bubble bubble--9">
-      <p class="number">3</p>
-    </div>
-    <div class="bubble bubble--10">
-      <p class="number">10</p>
-    </div>
-    <div class="bubble bubble--11">
-      <p class="number">4</p>
-    </div>
-    <div class="bubble bubble--12">
-      <p class="number">7</p>
-    </div>
-    <div class="bubble bubble--13">
-      <p class="number">1</p>
-    </div>
+        <!-- Score area -->
+        <div id="score-area">
+          <p id="high-score">High Score: 0</p>
+          <p id="current-score">Current Score: 0</p>
+        </div>
+      
+      <!-- Bubbles animation for background -->
+      <!-- Link to source website: https://codepen.io/codypearce/pen/VwYOGzq -->
+        <div class="bubble bubble--1">
+          <p class="number">2</p>
+        </div>
+        <div class="bubble bubble--2"></div>
+        <div class="bubble bubble--3"></div>
+        <div class="bubble bubble--4">
+          <p class="number">5</p>
+        </div>
+        <div class="bubble bubble--5">
+          <p class="number">6</p>
+        </div>
+        <div class="bubble bubble--6">
+        </div>
+        <div class="bubble bubble--7">
+          <p class="number">9</p>
+        </div>
+        <div class="bubble bubble--8">
+          <p class="number">8</p>
+        </div>
+        <div class="bubble bubble--9">
+          <p class="number">3</p>
+        </div>
+        <div class="bubble bubble--10">
+          <p class="number">10</p>
+        </div>
+        <div class="bubble bubble--11">
+          <p class="number">4</p>
+        </div>
+        <div class="bubble bubble--12">
+          <p class="number">7</p>
+        </div>
+        <div class="bubble bubble--13">
+          <p class="number">1</p>
+        </div>
 
       <!-- Modal window for rules -->
     <aside class="modal modal--hidden" id="modal">
@@ -133,7 +133,7 @@
         <p class="instructions-element">It can happen that you do not know the answer and do not want to give a guess.</p>
         <p class="instructions-element">In this case just click on the Reset button.</p>
         <p class="instructions-element">See you in the game!</p> 
-      </div>
+
     </aside>
     <div class="overlay overlay--hidden" id="overlay"></div>
   
