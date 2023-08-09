@@ -40,10 +40,11 @@
         <div id="user-input">
           <label for="user">Hi, I'm Bob.<br>What's your name?</label>
           <br>
-          <input type="text" id="child" name="child" maxlength=10>
+          <input type="text" id="child" name="child" maxlength=10 placeholder=" Type your name...">
+          <button data-type="" id="submit-btn" class="pink-btn">Play with me</button>
         </div>
+        
       </div>
-        <button data-type="" id="submit-btn" class="pink-btn">Play with me</button>
         
           <p class="user-log-error" id="error-message">
             Please try again. <br>Username must be between 1 and 10 characters.
@@ -51,22 +52,28 @@
 
         <!--Rules Button-->
         <div class="button__instructions" id="button__instructions">
-          <button class="btn__navigation--back" aria-label="go to contact modal"><i class="fa-solid fa-question"></i></button>
+          <button class="btn__navigation--back" id="rules-btn" aria-label="go to contact modal"><i class="fa-solid fa-question"></i></button>
         </div>
 
-        <!-- Timer -->
-        <p id="time-display"><i class="fa-solid fa-hourglass-start"></i> Time left: 10</p>
+        <!-- Area where game starts -->
+        <div id="game-set">
 
-        <!-- Question area-->
-        <h3 id="question">What is the correct answer?</h3>
-        <p id="operation">0 + 0</p>
+          <!-- Timer -->
+          <p id="time-display"><i class="fa-solid fa-hourglass-start"></i>Time left: 10</p>
 
-        <!-- Area for 4 Buttons with answers -->
-        <button id="btn1">0</button>
-        <button id="btn2">0</button>
-        <button id="btn3">0</button>
-        <button id="btn4">0</button>
-        <br>
+          <!-- Question area-->
+          <h3 id="question">What is the correct answer?</h3>
+          <p id="operation">0 + 0</p>
+
+          <!-- Area for 4 Buttons with answers -->
+          <button class="answer-btn" id="btn1">0</button>
+          <button class="answer-btn" id="btn2">0</button>
+          <button class="answer-btn" id="btn3">0</button>
+          <button class="answer-btn" id="btn4">0</button>
+          <br>
+          
+        </div>
+    
 
         <!-- Area with the buttons: button to Start and button to Reset-->
         <!-- Start button -->
