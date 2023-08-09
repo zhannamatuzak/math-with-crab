@@ -22,7 +22,30 @@
   flex-direction: column;
   text-align: center;
   font-family: 'Source-Sans-3', cursive;
+}
 
+h3 {
+  color: #7fff00;
+  font-family: 'Source-Sans-3', cursive;
+  font-weight: bold;
+  font-size: 140%;
+}
+
+p {
+  font-size: 100%;
+  font-weight: 400;
+  padding: 5px 10px;
+}
+
+#crab-text{
+  font-size: 160%;
+  font-weight: 400;
+}
+
+#user-input {
+font-size: 100%;
+font-weight: 400;
+padding: 5px 10px;
 }
 
 /* Add style to logo image (crab) */
@@ -78,6 +101,7 @@ img {
   color: #ff0081;
 }
 
+/* Game area where game takes place after submitting user's name */
 #game-area {
 background-color: #B8B8B8;
 box-sizing: border-box;
@@ -93,10 +117,10 @@ opacity: 0.6;
 border-radius: 10px;
 }
 
-h3 {
-  color: #7fff00;
-  font-family: 'Source-Sans-3', cursive;
-  font-weight: bold;
+#user-input {
+  font-size: 100%;
+  font-weight: 400;
+  padding: 5px 10px;
 }
 
 /* Add style to Play with me button and Start button */
@@ -173,7 +197,6 @@ h3 {
     background-color: darken(#ff0081, 5%);
     box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
   }
-  
 }
 
 /* Add style to rules button */
@@ -189,7 +212,7 @@ h3 {
 /* Add style to input in get name area*/
 input[type=text] {
   width: 160px;
-  margin: 15px auto auto auto;
+  margin: 10px auto auto auto;
   box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 4px;
@@ -235,8 +258,14 @@ input[type=text] {
   box-shadow: inset -2px 2px 10px 0px rgba(92,92,92,1);
 }
 
+#time-display {
+  font-size: 120%;
+  font-weight: 400;
+  padding: 5px 10px;
+}
+
 #operation {
-  font-size: 160%;
+  font-size: 180%;
   font-weight: 400;
   padding: 5px 10px;
   color: #00202e;
@@ -278,6 +307,7 @@ input[type=text] {
 
 .fa-hourglass-start {
   color:  #e00000;
+  padding: 5px 5px;
 }
 .bubble--1 {
   left: 10%;
@@ -299,7 +329,6 @@ input[type=text] {
   animation-duration: 10s;
   opacity: 0.1;
 }
-
 
 .bubble--3 {
   width: 10px;
