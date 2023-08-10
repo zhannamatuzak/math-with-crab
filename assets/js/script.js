@@ -35,8 +35,32 @@ function runMainScreen() {
   document.getElementById("user").focus();
 }
 
+/**
+ * Varification of user (child) name and interaction with it
+ */
+document.getElementById("submit-btn").addEventListener("click", checkUsername);
+
 function checkUsername() {
+  let username = document.getElementById("user").value.trim();
+
+  if (username.length >= 1 && username.length <= 10) {
+    document.getElementById("child-name").innerText =username + ", let's play!";
+    document.getElementById("child-name-rule").innerText = username + ",";
+    greeting.style.display = "none";
+    errorMessage.style.display = "none";
+    rules.style.display = "block";
+    gameSet.style.display = "block";
+    startBtn.style.display = "block";
+    newGame.style.display = "block";
+    scoreArea.style.display = "block";
+    childName.style.display = "block";
+  } else {
+    errorMessage.style.display = "block";
+    document.getElementById("user").focus();
+    document.getElementById("user").value = "";
+    }
 }
+checkUsername();
 
 function startGame() {
 }

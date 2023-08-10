@@ -40,6 +40,7 @@ p {
 #crab-text{
   font-size: 160%;
   font-weight: 400;
+  margin-top: 50px;
 }
 
 #user-input {

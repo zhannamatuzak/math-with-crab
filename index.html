@@ -34,18 +34,19 @@
 
     <div id="game-area">
 
+      <!-- Area with greeting and user (child) log-in -->
       <h2 id="child-name"></h2>
       <div id="user-input">
         <p id="crab-text">Hi, I'm Bob.<br>What's your name?</p>
         <label for="user"></label>
-        <input type="text" id="child" name="child" maxlength=10 placeholder=" Type your name...">
+        <input type="text" id="user" name="user" maxlength=10 placeholder="Type your name...">
         <button data-type="" id="submit-btn" class="pink-btn">Play with me</button>
       </div>
   
       <p class="user-log-error" id="error-message">
       Please try again. <br>Username must be between 1 and 10 characters.
       </p>
-
+      
       <!--Rules Button-->
       <div class="button__instructions" id="button-instructions rules">
         <button class="btn__navigation--back" id="rules-btn" aria-label="go to contact modal"><i class="fa-solid fa-question"></i></button>
