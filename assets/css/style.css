@@ -24,23 +24,28 @@
   font-family: 'Source-Sans-3', cursive;
 }
 
-h3 {
-  color: #7fff00;
-  font-family: 'Source-Sans-3', cursive;
-  font-weight: bold;
-  font-size: 140%;
-}
-
 p {
   font-size: 100%;
   font-weight: 400;
   padding: 5px 10px;
 }
 
-#crab-text{
+#crab-text {
   font-size: 160%;
   font-weight: 400;
   margin-top: 50px;
+}
+
+#question {
+  font-size: 140%;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+#child-name {
+  font-size: 140%;
+  font-weight: 400;
+  margin-top: 10px
 }
 
 #user-input {
@@ -208,6 +213,7 @@ border-radius: 10px;
   border: none;
   background-color: #B8B8B8;
   color: #00202e;
+  float: right;
 }
 
 /* Add style to input in get name area*/
@@ -227,6 +233,7 @@ input[type=text] {
   -moz-box-shadow: -2px 2px 10px 0px rgba(92,92,92,1);
   box-shadow: -2px 2px 10px 0px rgba(92,92,92,1);
 }
+
 /* Add style to answer buttons */
 .answer-btn {
   width: 50px;
@@ -260,7 +267,7 @@ input[type=text] {
 }
 
 #time-display {
-  font-size: 120%;
+  font-size: 130%;
   font-weight: 400;
   padding: 5px 10px;
 }
@@ -310,6 +317,7 @@ input[type=text] {
   color:  #e00000;
   padding: 5px 5px;
 }
+
 .bubble--1 {
   left: 10%;
   animation-delay: 0.5s;

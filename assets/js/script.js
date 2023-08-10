@@ -18,6 +18,7 @@ let startBtn = document.getElementById("start-btn");
 let newGame = document.getElementById("new-game");
 let scoreArea = document.getElementById("score-area");
 let timeDisplay = document.getElementById("time-display");
+let question = document.getElementById("question");
 
 /**
 * Show the main screen with greeting and user (child) log-in
@@ -33,6 +34,7 @@ function runMainScreen() {
   childName.style.display = "none";
   document.getElementById("child-name").innerText = "";
   document.getElementById("user").focus();
+  question.style.display = "none";
 }
 
 /**
@@ -44,7 +46,7 @@ function checkUsername() {
   let username = document.getElementById("user").value.trim();
 
   if (username.length >= 1 && username.length <= 10) {
-    document.getElementById("child-name").innerText =username + ", let's play!";
+    document.getElementById("child-name").innerText = username + ",";
     document.getElementById("child-name-rule").innerText = username + ",";
     greeting.style.display = "none";
     errorMessage.style.display = "none";
@@ -54,6 +56,7 @@ function checkUsername() {
     newGame.style.display = "block";
     scoreArea.style.display = "block";
     childName.style.display = "block";
+    question.style.display = "block";
   } else {
     errorMessage.style.display = "block";
     document.getElementById("user").focus();
