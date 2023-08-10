@@ -314,8 +314,7 @@ input[type=text] {
   animation-delay: 0.5s;
   animation-duration: 16s;
   opacity: 0.2;
-  display: flex;
-  display: flex;  
+  display: flex; 
   flex-wrap: wrap;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -471,10 +470,14 @@ input[type=text] {
   opacity: 0.2;
   display: flex;  
   flex-wrap: wrap;
-  padding-top: 1px;
-  padding-bottom: 1px;
+  padding-top: 0.5px;
+  padding-bottom: 0.5px;
 }
 
+.number {
+  padding: 0 0;
+  font-size: 90%;
+}
 #modal {
   font-size: 3px;
 }
