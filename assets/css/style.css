@@ -138,8 +138,6 @@ border-radius: 10px;
   font-weight: normal;
   padding: 0.5em 0.8em;
   margin: 20px 10px 10px 10px;
-  margin-left: 
-  -webkit-appearance none;
   appearance: none;
   background-color: #ff0081;
   color: #fff;
@@ -205,6 +203,11 @@ border-radius: 10px;
   }
 }
 
+#set-reset-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 /* Add style to rules button */
 #rules-btn {
   font-size: 180%;
