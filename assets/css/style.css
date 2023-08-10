@@ -27,7 +27,7 @@
 p {
   font-size: 100%;
   font-weight: 400;
-  padding: 5px 10px;
+  
 }
 
 #crab-text {
@@ -39,13 +39,16 @@ p {
 #question {
   font-size: 140%;
   font-weight: 400;
-  margin-top: 5px;
+  margin: 0 auto 20px auto;
 }
 
 #child-name {
   font-size: 140%;
   font-weight: 400;
-  margin-top: 10px
+  margin-top: 45px;
+  margin-bottom: 0;
+  text-align: center;
+
 }
 
 #user-input {
@@ -222,6 +225,11 @@ border-radius: 10px;
   float: right;
 }
 
+#rules {
+  text-align: right;
+}
+
+
 /* Add style to input in get name area*/
 input[type=text] {
   width: 160px;
@@ -273,7 +281,7 @@ input[type=text] {
 }
 
 #time-display {
-  font-size: 130%;
+  font-size: 100%;
   font-weight: 400;
   padding: 5px 10px;
 }
@@ -320,8 +328,25 @@ input[type=text] {
 }
 
 .fa-hourglass-start {
-  color:  #e00000;
+  color: #E11008;
   padding: 5px 5px;
+	animation: hourglass 10s cubic-bezier(.36,.07,.57,.99) infinite;
+}
+
+
+@keyframes hourglass {
+	0% {
+		transform: scale(1.5) rotate(0);
+	}
+	35% {
+		transform: scale(1.5) rotate(180deg);
+	}
+	65% {
+		transform: scale(1.5) rotate(180deg);
+	}
+	100% {
+		transform: scale(1.5) rotate(0);
+	}
 }
 
 .bubble--1 {
@@ -401,8 +426,8 @@ input[type=text] {
   opacity: 0.3;
   display: flex;  
   flex-wrap: wrap;
-  padding-top: 1px;
-  padding-bottom: 1px;
+  padding-top: 0.4px;
+  padding-bottom: 0.4px;
 }
 
 .bubble--8 {
