@@ -34,6 +34,11 @@
 
     <div id="game-area">
 
+      <!--Rules Button-->
+      <div class="button__instructions" id="button-instructions rules">
+        <button class="btn__navigation--back" id="rules-btn" aria-label="go to contact modal"><i class="fa-solid fa-question"></i></button>
+      </div>
+
       <!-- Area with greeting and user (child) log-in -->
       <p id="child-name"></p>
 
@@ -51,16 +56,8 @@
       Please try again. <br>Username must be between 1 and 10 characters.
       </p>
       
-      <!--Rules Button-->
-      <div class="button__instructions" id="button-instructions rules">
-        <button class="btn__navigation--back" id="rules-btn" aria-label="go to contact modal"><i class="fa-solid fa-question"></i></button>
-      </div>
-
       <!-- Area where game starts -->
       <div id="game-set">
-
-      <!-- Timer -->
-      <p id="time-display"><i class="fa-solid fa-hourglass-start"></i>10</p>
 
       <!-- Question area-->
       <p id="operation">0 + 0</p>
@@ -74,7 +71,6 @@
           
       </div>
     
-
       <!-- Area with the buttons: button to Start and button to Reset-->
       <div id="set-reset-btn">
         <!-- Start button -->
@@ -89,8 +85,11 @@
         <p id="high-score">High Score: 0</p>
         <p id="current-score">Current Score: 0</p>
       </div>
-    </div>
       
+      <!-- Timer -->
+      <p id="time-display"><i class="fa-solid fa-hourglass-start"></i>10</p>
+    </div>
+
       <!-- Bubbles animation for background -->
       <!-- Link to source website: https://codepen.io/codypearce/pen/VwYOGzq -->
         <div class="bubble bubble--1">

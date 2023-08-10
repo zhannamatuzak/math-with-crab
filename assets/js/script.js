@@ -32,6 +32,7 @@ function runMainScreen() {
   newGame.style.display = "none";
   scoreArea.style.display = "none";
   childName.style.display = "none";
+  timeDisplay.style.display = "none";
   document.getElementById("child-name").innerText = "";
   document.getElementById("user").focus();
   question.style.display = "none";
@@ -57,6 +58,7 @@ function checkUsername() {
     scoreArea.style.display = "block";
     childName.style.display = "block";
     question.style.display = "block";
+    timeDisplay.style.display = "block";
   } else {
     errorMessage.style.display = "block";
     document.getElementById("user").focus();

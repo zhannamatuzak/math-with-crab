@@ -129,7 +129,7 @@ border-radius: 10px;
   padding: 5px 10px;
 }
 
-/* Add style to Play with me button and Start button */
+/* Add style to Play with me button and Start and Reset button */
 /* Code war taken and added from https://webdeasy.de/top-css-buttons/ */
 .pink-btn {
   font-family: 'Sans-Source-3', sans-serif;
@@ -203,11 +203,14 @@ border-radius: 10px;
   }
 }
 
+/* Define the position of Start and Reset buttons */
 #set-reset-btn {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-bottom: 15px;
 }
+
 /* Add style to rules button */
 #rules-btn {
   font-size: 180%;
