@@ -84,10 +84,11 @@ let timerInterval;
  * When the timer gets 0, the game stops
  */
 function startGame() {
+
   timeDisplay.style.display = "block";
-  
-  nextQuestion();
-  
+
+  startBtn.disabled = true;
+
   timerInterval = setInterval(function () {
     // Time decrease for 1 second
     timeLeft -= 1;
@@ -100,10 +101,24 @@ function startGame() {
   // Setting interval: the time that is left decreases.
   // For every second the time will be changed.
   // 1000 milliseconds are between the seconds
-  },1000)
+  }, 1000)
+  
+  nextQuestion()
 }
 
+/**
+ * The nextQuestion function will choose the random operation
+ * And change the buttons to equal 4 addition results
+ * One of this results should be the correct answer
+ */
 function nextQuestion() {
+  let operationField = document.getElementById("operation");
+  // Highest possible number to add
+  // 10 will be the highest answer
+  let firstNum = Math.floor(Math.random() * 5);
+  let secondNum = Math.floor(Math.random() * 5);
+  let correctAnswer = firstNum + secondNum;
+  operationField.innerHTML = firstNum + "+" + secondNum;
 }
 
 function checkAnawer() {
