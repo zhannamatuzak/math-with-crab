@@ -115,10 +115,29 @@ function nextQuestion() {
   let operationField = document.getElementById("operation");
   // Highest possible number to add
   // 10 will be the highest answer
-  let firstNum = Math.floor(Math.random() * 5);
-  let secondNum = Math.floor(Math.random() * 5);
+  let firstNum = Math.ceil(Math.random() * 5);
+  let secondNum = Math.ceil(Math.random() * 5);
   let correctAnswer = firstNum + secondNum;
   operationField.innerHTML = firstNum + "+" + secondNum;
+
+  // Set buttons to have random answers and
+  // one should be the correct naswer
+  let wrongAnswer1 = Math.ceil(Math.random() * 5) + Math.floor(Math.random() * 5);
+  let wrongAnswer2 = Math.ceil(Math.random() * 5) + Math.floor(Math.random() * 5);
+  let wrongAnswer3 = Math.ceil(Math.random() * 5) + Math.floor(Math.random() * 5);
+  let wrongAnswer4 = Math.ceil(Math.random() * 5) + Math.floor(Math.random() * 5);
+
+  // Set buttons to have each of the answers
+  document.getElementById("btn1").innerHTML = wrongAnswer1;
+  document.getElementById("btn2").innerHTML = wrongAnswer2;
+  document.getElementById("btn3").innerHTML = wrongAnswer3;
+  document.getElementById("btn4").innerHTML = wrongAnswer4;
+
+  // Index to put in the correctAnswer
+  let correctAnswerIndex = Math.floor(Math.random()*4)+1; // 1 2 3 4 
+  // Extract the id
+  let correctAnswerId = "btn" + correctAnswerIndex;
+  document.getElementById(correctAnswerId).innerHTML = correctAnswer;
 }
 
 function checkAnawer() {
