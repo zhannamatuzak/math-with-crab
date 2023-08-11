@@ -73,11 +73,20 @@ checkUsername();
  * 10 is the amount of seconds
  */
 let timeLeft = 10;
+// Timer variable constant for start/reset timer functions 
+// It is global and can be used in startGame function
 let timer = document.getElementById("timer");
 let timerInterval;
 
+/**
+ * When the start button is clicked, the function nextQuestion will be called and 
+ * the timer will be triggered to start
+ * When the timer gets 0, the game stops
+ */
 function startGame() {
   timeDisplay.style.display = "block";
+  
+  nextQuestion();
   
   timerInterval = setInterval(function () {
     // Time decrease for 1 second
