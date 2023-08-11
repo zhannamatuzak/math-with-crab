@@ -39,7 +39,7 @@ function runMainScreen() {
 }
 
 /**
- * Varification of user (child) name and interaction with it
+ * Varification of user (child) name and a later interaction with it
  */
 document.getElementById("submit-btn").addEventListener("click", checkUsername);
 
@@ -58,16 +58,40 @@ function checkUsername() {
     scoreArea.style.display = "block";
     childName.style.display = "block";
     question.style.display = "block";
-    timeDisplay.style.display = "block";
+    timeDisplay.style.display = "none";
   } else {
     errorMessage.style.display = "block";
     document.getElementById("user").focus();
     document.getElementById("user").value = "";
     }
 }
+
 checkUsername();
 
+/**
+ * Set up a variable for the timer.
+ * 10 is the amount of seconds
+ */
+let timeLeft = 10;
+let timer = document.getElementById("timer");
+let timerInterval;
+
 function startGame() {
+  timeDisplay.style.display = "block";
+  
+  timerInterval = setInterval(function () {
+    // Time decrease for 1 second
+    timeLeft -= 1;
+    // Showing time that is left
+    timeDisplay.innerHTML = timeLeft;
+    if (timeLeft == 0) {
+      // Time stops changing after getting to 0
+      clearInterval(timerInterval);
+    }
+  // Setting interval: the time that is left decreases.
+  // For every second the time will be changed.
+  // 1000 milliseconds are between the seconds
+  },1000)
 }
 
 function nextQuestion() {

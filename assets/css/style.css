@@ -230,7 +230,7 @@ border-radius: 10px;
 }
 
 
-/* Add style to input in get name area*/
+/* Add style to input in get name area */
 input[type=text] {
   width: 160px;
   margin: 10px auto auto auto;
@@ -243,6 +243,7 @@ input[type=text] {
   background-repeat: no-repeat;
   padding: 10px 20px 10px 5px;
   transition: width 0.4s ease-in-out;
+  /* This piece of style code is taken from the answer buttons style [see below] */
   -webkit-box-shadow: -2px 2px 10px 0px rgba(92,92,92,1);
   -moz-box-shadow: -2px 2px 10px 0px rgba(92,92,92,1);
   box-shadow: -2px 2px 10px 0px rgba(92,92,92,1);
@@ -263,7 +264,6 @@ input[type=text] {
   -webkit-box-shadow: -2px 2px 10px 0px rgba(92,92,92,1);
   -moz-box-shadow: -2px 2px 10px 0px rgba(92,92,92,1);
   box-shadow: -2px 2px 10px 0px rgba(92,92,92,1);
-  
 }
 
 .answer-btn:hover {
@@ -291,8 +291,31 @@ input[type=text] {
   font-weight: 400;
   padding: 5px 10px;
   color: #00202e;
-
 }
+
+/* Styling the icon hourglass for timer element */
+.fa-hourglass-start {
+  color: #E11008;
+  padding: 5px 5px;
+	animation: hourglass 10s cubic-bezier(.36,.07,.57,.99) infinite;
+}
+
+
+@keyframes hourglass {
+	0% {
+		transform: scale(1.5) rotate(0);
+	}
+	35% {
+		transform: scale(1.5) rotate(180deg);
+	}
+	65% {
+		transform: scale(1.5) rotate(180deg);
+	}
+	100% {
+		transform: scale(1.5) rotate(0);
+	}
+}
+
 /* Swimming bubbles for ocean */
 .bubble {
   width: 30px;
