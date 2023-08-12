@@ -251,10 +251,10 @@ input[type=text] {
 
 /* Add style to answer buttons */
 .answer-btn {
-  width: 50px;
-  height: 50px;
-  font-size: 20px;
-  margin: 15px 5px 15px 5px;
+  width: 90px;
+  height: 90px;
+  font-size: 35px;
+  margin: 15px 10px 15px 10px;
   color: gray;
   background: #efefef;
   border-radius: 100%;

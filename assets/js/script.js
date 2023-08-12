@@ -124,17 +124,16 @@ function nextQuestion() {
   // one should be the correct naswer
   let wrongAnswer1 = Math.ceil(Math.random() * 5) + Math.floor(Math.random() * 5);
   let wrongAnswer2 = Math.ceil(Math.random() * 5) + Math.floor(Math.random() * 5);
-  let wrongAnswer3 = Math.ceil(Math.random() * 5) + Math.floor(Math.random() * 5);
-  let wrongAnswer4 = Math.ceil(Math.random() * 5) + Math.floor(Math.random() * 5);
+  
+
 
   // Set buttons to have each of the answers
   document.getElementById("btn1").innerHTML = wrongAnswer1;
   document.getElementById("btn2").innerHTML = wrongAnswer2;
-  document.getElementById("btn3").innerHTML = wrongAnswer3;
-  document.getElementById("btn4").innerHTML = wrongAnswer4;
+  
 
   // Index to put in the correctAnswer
-  let correctAnswerIndex = Math.floor(Math.random()*4)+1; // 1 2 3 4 
+  let correctAnswerIndex = Math.floor(Math.random()*2)+1; // 1 2 3 4 
   // Extract the id
   let correctAnswerId = "btn" + correctAnswerIndex;
   document.getElementById(correctAnswerId).innerHTML = correctAnswer;
