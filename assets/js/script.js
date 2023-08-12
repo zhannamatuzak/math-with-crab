@@ -46,7 +46,7 @@ document.getElementById("submit-btn").addEventListener("click", checkUsername);
 function checkUsername() {
   let username = document.getElementById("user").value.trim();
 
-  if (username.length >= 1 && username.length <= 10) {
+  if (username.length >= 1 && username.length <= 10 && username[0] === username[0].toUpperCase()) {
     document.getElementById("child-name").innerText = username + ",";
     document.getElementById("child-name-rule").innerText = username + ",";
     greeting.style.display = "none";
