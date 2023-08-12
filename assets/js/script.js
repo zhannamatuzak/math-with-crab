@@ -71,12 +71,12 @@ checkUsername();
 /**
  * Set up a variable for the timer.
  * 10 is the amount of seconds
+ * Timer variable constant for start/reset timer functions
+ * It is global and can be used in startGame function 
  */
 let timeLeft = 10;
-// Timer variable constant for start/reset timer functions 
-// It is global and can be used in startGame function
-let timer = document.getElementById("timer");
 let timerInterval;
+timerSecondsshown = document.getElementById("timer-seconds");
 
 /**
  * When the start button is clicked, the function nextQuestion will be called and 
@@ -93,7 +93,7 @@ function startGame() {
     // Time decrease for 1 second
     timeLeft -= 1;
     // Showing time that is left
-    timeDisplay.innerHTML = '<i id= "timer" class="fa-solid fa-hourglass-start"></i>' + timeLeft;
+    timerSecondsshown.innerHTML = timeLeft;
     if (timeLeft == 0) {
       // Time stops changing after getting to 0
       clearInterval(timerInterval);
