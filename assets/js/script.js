@@ -93,7 +93,7 @@ function startGame() {
     // Time decrease for 1 second
     timeLeft -= 1;
     // Showing time that is left
-    timeDisplay.innerHTML = timeLeft;
+    timeDisplay.innerHTML = '<i id= "timer" class="fa-solid fa-hourglass-start"></i>' + timeLeft;
     if (timeLeft == 0) {
       // Time stops changing after getting to 0
       clearInterval(timerInterval);
