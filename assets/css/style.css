@@ -39,7 +39,7 @@ p {
 #question {
   font-size: 140%;
   font-weight: 400;
-  margin: 0 auto 20px auto;
+  margin: 5px auto 5px auto;
 }
 
 #child-name {
@@ -48,7 +48,6 @@ p {
   margin-top: 45px;
   margin-bottom: 0;
   text-align: center;
-
 }
 
 #user-input {
@@ -137,10 +136,10 @@ border-radius: 10px;
 .pink-btn {
   font-family: 'Sans-Source-3', sans-serif;
   display: inline-block;
-  font-size: 1em;
+  font-size: 1.1em;
   font-weight: normal;
-  padding: 0.5em 0.8em;
-  margin: 20px 10px 10px 10px;
+  padding: 0.8em 1em;
+  margin: 10px;
   appearance: none;
   background-color: #ff0081;
   color: #fff;
@@ -211,7 +210,6 @@ border-radius: 10px;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-bottom: 15px;
 }
 
 /* Add style to rules button */
@@ -228,8 +226,6 @@ border-radius: 10px;
 #rules {
   text-align: right;
 }
-
-
 /* Add style to input in get name area */
 input[type=text] {
   width: 160px;
@@ -251,10 +247,10 @@ input[type=text] {
 
 /* Add style to answer buttons */
 .answer-btn {
-  width: 90px;
-  height: 90px;
-  font-size: 35px;
-  margin: 15px 10px 15px 10px;
+  width: 80px;
+  height: 80px;
+  font-size: 40px;
+  margin: 10px;
   color: gray;
   background: #efefef;
   border-radius: 100%;
@@ -272,7 +268,7 @@ input[type=text] {
 }
 
 .answer-btn:focus {
-  color: black;
+  color: #00202e;
   background: #dadada;
   border: 1px solid black;
   -webkit-box-shadow: inset -2px 2px 10px 0px rgba(92,92,92,1);
@@ -287,7 +283,7 @@ input[type=text] {
 }
 
 #operation {
-  font-size: 180%;
+  font-size: 250%;
   font-weight: 400;
   padding: 5px 10px;
   color: #00202e;
@@ -299,7 +295,6 @@ input[type=text] {
   padding: 5px 5px;
 	animation: hourglass 10s cubic-bezier(.36,.07,.57,.99) infinite;
 }
-
 
 @keyframes hourglass {
 	0% {

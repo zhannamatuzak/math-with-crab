@@ -43,10 +43,13 @@ function runMainScreen() {
  */
 document.getElementById("submit-btn").addEventListener("click", checkUsername);
 
+
+
 function checkUsername() {
   let username = document.getElementById("user").value.trim();
 
-  if (username.length >= 1 && username.length <= 10 && username[0] === username[0].toUpperCase()) {
+
+  if (username.length >= 1 && username.length <= 10 && username[0].toUpperCase()){
     document.getElementById("child-name").innerText = username + ",";
     document.getElementById("child-name-rule").innerText = username + ",";
     greeting.style.display = "none";
@@ -76,19 +79,19 @@ checkUsername();
  */
 let timeLeft = 10;
 let timerInterval;
+let score = 0;
 timerSecondsshown = document.getElementById("timer-seconds");
 
 /**
  * When the start button is clicked, the function nextQuestion will be called and 
- * the timer will be triggered to start
- * When the timer gets 0, the game stops
+ * The timer will be triggered to start and when it gets 0, the game stops
+ * Setting interval: the time that is left decreases; for every second the time will be changed
+ * 1000 milliseconds are between the seconds
  */
 function startGame() {
 
   timeDisplay.style.display = "block";
-
   startBtn.disabled = true;
-
   timerInterval = setInterval(function () {
     // Time decrease for 1 second
     timeLeft -= 1;
@@ -98,9 +101,6 @@ function startGame() {
       // Time stops changing after getting to 0
       clearInterval(timerInterval);
     }
-  // Setting interval: the time that is left decreases.
-  // For every second the time will be changed.
-  // 1000 milliseconds are between the seconds
   }, 1000)
   
   nextQuestion()
@@ -113,20 +113,14 @@ function startGame() {
  */
 function nextQuestion() {
   let operationField = document.getElementById("operation");
-  // Highest possible number to add
-  // 10 will be the highest answer
+  // Highest possible number to add and 10 will be the highest answer
   let firstNum = Math.ceil(Math.random() * 5);
   let secondNum = Math.ceil(Math.random() * 5);
   let correctAnswer = firstNum + secondNum;
   operationField.innerHTML = firstNum + "+" + secondNum;
-
-  // Set buttons to have random answers and
-  // one should be the correct naswer
+  // Set buttons to have random answers and one should be the correct naswer
   let wrongAnswer1 = Math.ceil(Math.random() * 5) + Math.floor(Math.random() * 5);
   let wrongAnswer2 = Math.ceil(Math.random() * 5) + Math.floor(Math.random() * 5);
-  
-
-
   // Set buttons to have each of the answers
   document.getElementById("btn1").innerHTML = wrongAnswer1;
   document.getElementById("btn2").innerHTML = wrongAnswer2;
@@ -139,7 +133,12 @@ function nextQuestion() {
   document.getElementById(correctAnswerId).innerHTML = correctAnswer;
 }
 
-function checkAnawer() {
+/**
+ * function that checks whether the result is correct
+ */
+function checkAnawer(buttonIndex) {
+  let answer = document.getElementById("btn" + buttonIndex).innerHTML;
+
 }
 
 

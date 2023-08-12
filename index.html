@@ -63,6 +63,14 @@
       <!-- Area where game starts -->
       <div id="game-set">
 
+      <!-- Area with the buttons: button to Start and button to Reset-->
+      <div id="set-reset-btn">
+        <!-- Start button -->
+        <button class="pink-btn" id="start-btn" onclick="startGame()">Start</button>
+        <!-- Reset button -->
+        <button id="new-game" class="pink-btn">Reset</button>
+      </div>
+
         <!-- Timer -->
       <p id="time-display">
         <i id= "timer" class="fa-solid fa-hourglass-start"></i>
@@ -73,23 +81,12 @@
       <p id="operation">0 + 0</p>
 
       <!-- Area for 4 Buttons with answers -->
-      <button class="answer-btn" id="btn1">x</button>
-      <button class="answer-btn" id="btn2">x</button>
-      
-      
+      <button class="answer-btn" id="btn1" onclick="checkAnswer(1)">x</button>
+      <button class="answer-btn" id="btn2" onclick="checkAnswer(1)">x</button>
       <br>
           
       </div>
     
-      <!-- Area with the buttons: button to Start and button to Reset-->
-      <div id="set-reset-btn">
-        <!-- Start button -->
-        <button class="pink-btn" id="start-btn" onclick="startGame()">Start</button>
-        <!-- Reset button -->
-        <button id="new-game" class="pink-btn">Reset</button>
-      </div>
-      
-
       <!-- Score area -->
       <div id="score-area">
         <p id="high-score">High Score: 0</p>
