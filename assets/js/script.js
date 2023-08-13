@@ -12,7 +12,7 @@ runMainScreen();
 let greeting = document.getElementById("user-input");
 let childName = document.getElementById("child-name");
 let errorMessage = document.getElementById("error-message");
-let rules = document.getElementById("rules-btn");
+const rules = document.querySelector('#rules-btn');
 let gameSet = document.getElementById("game-set");
 let startBtn = document.getElementById("start-btn");
 let newGame = document.getElementById("new-game");
@@ -51,7 +51,7 @@ function checkUsername() {
   let username = document.getElementById("user").value.trim();
 
 
-  if (username.length >= 1 && username.length <= 10 && username[0].toUpperCase()){
+  if (username.length >= 1 && username.length <= 10 && username[0] == username[0].toUpperCase()){
     document.getElementById("child-name").innerText = username + ",";
     document.getElementById("child-name-rule").innerText = username + ",";
     greeting.style.display = "none";
@@ -81,7 +81,7 @@ checkUsername();
  * Timer variable constant for start/reset timer functions
  * It is global and can be used in startGame function 
  */
-let timeLeft = 45;
+let timeLeft = 10;
 let timerInterval;
 let score = 0;
 let correctAnswer = 0;
@@ -94,9 +94,10 @@ timerSecondsshown = document.getElementById("timer-seconds");
  * 1000 milliseconds are between the seconds
  */
 function startGame() {
-
   timeDisplay.style.display = "block";
   startBtn.disabled = true;
+  nextQuestion();
+
   timerInterval = setInterval(function () {
     // Time decrease for 1 second
     timeLeft -= 1;
@@ -109,9 +110,8 @@ function startGame() {
       document.getElementById("btn2").disabled = true;
     }
   }, 1000)
-  
-  nextQuestion();
 }
+  
 
 /**
  * The nextQuestion function will choose the random operation
@@ -122,8 +122,8 @@ function nextQuestion() {
   let operationField = document.getElementById("operation");
   // Highest possible number to add and 10 will be the highest answer
   
-  let firstNum = Math.ceil(Math.random() * 5);
-  let secondNum = Math.ceil(Math.random() * 5);
+  let firstNum = Math.floor(Math.random() * 5);
+  let secondNum = Math.floor(Math.random() * 5);
   
   correctAnswer = firstNum + secondNum;
   operationField.innerHTML = firstNum + "+" + secondNum;
@@ -131,9 +131,8 @@ function nextQuestion() {
   
   let wrongAnswer1 = Math.floor(Math.random() * 5) + Math.floor(Math.random() * 5);
   let wrongAnswer2 = Math.floor(Math.random() * 5) + Math.floor(Math.random() * 5);
-  if (wrongAnswer1 == correctAnswer | wrongAnswer2 == correctAnswer) nextQuestion();
+  if (wrongAnswer1 == correctAnswer || wrongAnswer2 == correctAnswer) nextQuestion();
 
-  
   // Set buttons to have each of the answers
   document.getElementById("btn1").innerHTML = wrongAnswer1;
   document.getElementById("btn2").innerHTML = wrongAnswer2;
@@ -144,8 +143,6 @@ function nextQuestion() {
   let correctAnswerId = "btn" + correctAnswerIndex;
   document.getElementById(correctAnswerId).innerHTML = correctAnswer;
 }
-
-
 
 /**
  * function that checks whether the result is correct
@@ -169,6 +166,39 @@ function checkAnswer(buttonIndex) {
 }
 
 
+const modal = document.querySelector('#modal');
+const overlay = document.querySelector('#overlay');
+const btnCloseModal = document.querySelector('#close-modal');
 
 
+/** 
+ * Open Instructions 
+ * */
+rules.addEventListener('click', openModal);
 
+  //Close instructions 
+btnCloseModal.addEventListener('click', closeModal);
+
+overlay.addEventListener('click', closeModal);
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+      closeModal();
+    }
+});
+
+/**
+ * Open instructions modal window
+ */
+function openModal() {
+  modal.classList.remove('modal--hidden');
+  overlay.classList.remove('overlay--hidden');
+};
+
+/**
+ * Close instructions modal window
+ */
+function closeModal () {
+  modal.classList.add('modal--hidden');
+  overlay.classList.add('overlay--hidden');
+};

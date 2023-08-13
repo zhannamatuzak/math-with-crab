@@ -223,6 +223,9 @@ border-radius: 10px;
   float: right;
 }
 
+#cry, #happy {
+  float: left;
+}
 #rules {
   text-align: right;
 }
@@ -536,6 +539,52 @@ input[type=text] {
   padding: 0 0;
   font-size: 90%;
 }
-#modal {
-  font-size: 3px;
+
+
+
+/* Styling instruction*/
+
+.overlay {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  z-index: 5;
+}
+
+.overlay--hidden {
+  display: none;
+}
+
+.modal {
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 43rem;
+  height: 35rem;
+  background-color: #B8B8B8;
+  border-radius: var(--br);
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.7);
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.1rem;
+  right: 1.9rem;
+  font-size: 4rem;
+  color: var(--clr-neutral-100);
+  cursor: pointer;
+  border: none;
+  background: none;
+
+}
+
+.modal--hidden {
+  display: none;
 }
