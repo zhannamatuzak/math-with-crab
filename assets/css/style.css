@@ -24,10 +24,13 @@
   font-family: 'Source-Sans-3', cursive;
 }
 
+h2 {
+  color: #E11008; 
+}
+
 p {
   font-size: 100%;
   font-weight: 400;
-  
 }
 
 #crab-text {
@@ -64,7 +67,7 @@ img {
   margin: 25px 0 0 0;
 }
 
-#logo {
+.logo {
   position: relative;
   animation: myfirst ease 5s;
   animation-iteration-count: 1
@@ -106,7 +109,7 @@ img {
 .header-hint {
   margin: 0 auto 20px auto;
   font-family: cursive;
-  color: #ff0081;
+  color: #00202e;
 }
 
 /* Game area where game takes place after submitting user's name */
@@ -214,7 +217,7 @@ border-radius: 10px;
 
 /* Add style to rules button */
 #rules-btn {
-  font-size: 180%;
+  font-size: 200%;
   font-weight: 400;
   padding: 5px 10px;
   border: none;
@@ -225,10 +228,10 @@ border-radius: 10px;
 
 #cry, #happy {
   float: left;
+  font-size: 200%;
+  padding: 0 10px;
 }
-#rules {
-  text-align: right;
-}
+
 /* Add style to input in get name area */
 input[type=text] {
   width: 160px;
@@ -543,7 +546,6 @@ input[type=text] {
 
 
 /* Styling instruction*/
-
 .overlay {
   height: 100vh;
   width: 100vw;
@@ -571,6 +573,9 @@ input[type=text] {
   background-color: #B8B8B8;
   border-radius: var(--br);
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  padding: 25px;
+;
 }
 
 .close-modal {
@@ -582,9 +587,15 @@ input[type=text] {
   cursor: pointer;
   border: none;
   background: none;
-
 }
 
 .modal--hidden {
   display: none;
+}
+
+.instructions-element {
+  color: #00202e;
+  font-size: 120%;
+  font-weight: 400;
+  margin: 15px;
 }

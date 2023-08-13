@@ -23,7 +23,7 @@
   <!-- Some changes was make to adopt buttons for the game need -->
   <body id="ocean" class="ocean">
     <header class="header">
-      <div id="logo">
+      <div class="logo">
         <img id="logo-image" src="assets/images/crab-logo.png" alt=""/>
       </div>
       <div>
@@ -35,8 +35,8 @@
     <div id="game-area">
 
       <!--Rules Button and emoji-->
-      <span id="cry" style='font-size:30px;'>&#128526;</span>
-      <span id="happy" style='font-size:20px;'>&#128557;</span>
+      <span id="cry">&#128526;</span>
+      <span id="happy">&#128557;</span>
       
       
       <button class="btn__navigation--back" id="rules-btn" aria-label="go to contact modal"><i class="fa-solid fa-circle-info"></i></button>
@@ -141,16 +141,16 @@
       <button class="close-modal" id="close-modal">&times;</button>
       <div class="modal-instructions">
         <h2 id="child-name-rule"></h2>
-        <p class="instructions-element">please read these rules before you start to play.</p>
         <p class="instructions-element">Click on the Start button if you want to play with me.</p>
         <p class="instructions-element">You will see the addition of two numbers.</p>
-        <p class="instructions-element">I will give you 4 possible answers.</p>
-        <p class="instructions-element">These will be 4 buttons with the answers on it</p>
-        <p class="instructions-element">If you know the correct answer, click fast on itand carry on because the time goes!</p>
-        <p class="instructions-element">You will get no score if the answer is incorrect.</p>
-        <p class="instructions-element">It can happen that you do not know the answer and do not want to give a guess.</p>
-        <p class="instructions-element">In this case just click on the Reset button.</p>
+        <p class="instructions-element">I will give you 2 possible buttons answers.</p>
+        <p class="instructions-element">If you know the correct answer, click fast on it and carry on because the time goes!</p>
+        <p class="instructions-element">You will get no score and crying emoji if the answer is incorrect.</p>
+        <p class="instructions-element">If the answer is correct, the happy emoji appears and you will get a score.</p>
         <p class="instructions-element">See you in the game!</p> 
+        <div id="logo">
+        <img id="logo-image" src="assets/images/crab-logo.png" alt=""/>
+      </div>
       </div>
     </aside>
     <div class="overlay overlay--hidden" id="overlay"></div>
