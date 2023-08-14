@@ -7,12 +7,11 @@ runMainScreen();
 });
 
 /**
- * Set up of game variables to vary display/hide
+ * Set up of global variables to vary display/hide
  */
 let greeting = document.getElementById("user-input");
 let childName = document.getElementById("child-name");
 let errorMessage = document.getElementById("error-message");
-const rules = document.querySelector('#rules-btn');
 let gameSet = document.getElementById("game-set");
 let startBtn = document.getElementById("start-btn");
 let newGame = document.getElementById("new-game");
@@ -20,6 +19,24 @@ let scoreArea = document.getElementById("score-area");
 let timeDisplay = document.getElementById("time-display");
 let question = document.getElementById("question");
 let happy = document.getElementById("happy");
+
+/**
+ * Global variables to set timer and to check score and correct answer
+ */
+let timeLeft = 31;
+let timerInterval;
+let correctAnswer = 0;
+let score = 0;
+let highScore = 0;
+
+/**
+ * Block-scoped local variables for modal window
+ */
+const rules = document.querySelector('#rules-btn');
+const modal = document.querySelector('#modal');
+const overlay = document.querySelector('#overlay');
+const btnCloseModal = document.querySelector('#close-modal');
+
 /**
 * Show the main screen with greeting and user (child) log-in
 */
@@ -46,12 +63,8 @@ function runMainScreen() {
  */
 document.getElementById("submit-btn").addEventListener("click", checkUsername);
 
-
-
 function checkUsername() {
   let username = document.getElementById("user").value.trim();
-
-
   if (username.length >= 1 && username.length <= 10 && username[0] == username[0].toUpperCase()){
     document.getElementById("child-name").innerText = username + ",";
     document.getElementById("child-name-rule").innerText = username + ",";
@@ -85,11 +98,7 @@ checkUsername();
  * Timer variable constant for start/reset timer functions
  * It is global and can be used in startGame function 
  */
-let timeLeft = 31;
-let timerInterval;
-let correctAnswer = 0;
-let score = 0;
-let highScore = 0;
+
 timerSecondsshown = document.getElementById("timer-seconds");
 
 window.onload = function () {
@@ -98,11 +107,8 @@ window.onload = function () {
     highScore = scoreFromBrowser;
   }
   else {
-
   }
   document.getElementById("high-score").innerHTML = "High Score: " + highScore;
-
-  
 }
 
 /**
@@ -205,19 +211,14 @@ function checkAnswer(buttonIndex) {
   nextQuestion();
 }
 
-
-
-const modal = document.querySelector('#modal');
-const overlay = document.querySelector('#overlay');
-const btnCloseModal = document.querySelector('#close-modal');
-
-
 /** 
- * Open Instructions 
- * */
+ * Open Instructions button
+ */
 rules.addEventListener('click', openModal);
 
-  //Close instructions 
+/**
+ * Close instructions 
+ * */
 btnCloseModal.addEventListener('click', closeModal);
 
 overlay.addEventListener('click', closeModal);
@@ -234,6 +235,7 @@ document.addEventListener('keydown', function (e) {
 function openModal() {
   modal.classList.remove('modal--hidden');
   overlay.classList.remove('overlay--hidden');
+  document.getElementById("welcome").play().disabled = true;
 };
 
 /**
