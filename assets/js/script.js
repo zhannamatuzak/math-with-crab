@@ -28,6 +28,7 @@ let timerInterval;
 let correctAnswer = 0;
 let score = 0;
 let highScore = 0;
+let operationField = document.getElementById("operation");
 
 /**
  * Block-scoped local variables for modal window
@@ -121,7 +122,7 @@ function startGame() {
   timeDisplay.style.display = "block";
   startBtn.disabled = true;
   document.getElementById("btn1").disabled = false;
-    document.getElementById("btn2").disabled = false;
+  document.getElementById("btn2").disabled = false;
   
   nextQuestion();
 
@@ -135,7 +136,6 @@ function startGame() {
       clearInterval(timerInterval);
       document.getElementById("btn1").disabled = true;
       document.getElementById("btn2").disabled = true;
-      
     }
   }, 1000)
 }
@@ -162,9 +162,7 @@ function resetTimer() {
  * One of this results should be the correct answer
  */
 function nextQuestion() {
-  let operationField = document.getElementById("operation");
   // Highest possible number to add and 10 will be the highest answer
-  
   let firstNum = Math.floor(Math.random() * 5);
   let secondNum = Math.floor(Math.random() * 5);
   
