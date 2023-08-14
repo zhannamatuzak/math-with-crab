@@ -83,7 +83,6 @@ checkUsername();
  */
 let timeLeft = 10;
 let timerInterval;
-let score = 0;
 let correctAnswer = 0;
 timerSecondsshown = document.getElementById("timer-seconds");
 
@@ -96,6 +95,7 @@ timerSecondsshown = document.getElementById("timer-seconds");
 function startGame() {
   timeDisplay.style.display = "block";
   startBtn.disabled = true;
+  
   nextQuestion();
 
   timerInterval = setInterval(function () {
@@ -108,11 +108,26 @@ function startGame() {
       clearInterval(timerInterval);
       document.getElementById("btn1").disabled = true;
       document.getElementById("btn2").disabled = true;
+      
     }
   }, 1000)
 }
+const currentScore = document.getElementById("current-score");
+function resetGame() {
+  resetTimer();
+  startGame();; 
+  document.getElementById("btn1").disabled = false;
+  document.getElementById("btn2").disabled = false;
+  currentScore.textContent = 'Current Score: 0';
   
+}
 
+function resetTimer() {
+    clearInterval(timerInterval);
+    timeLeft = 10;
+    timerSecondsshown;
+    
+  }
 /**
  * The nextQuestion function will choose the random operation
  * And change the buttons to equal 4 addition results
@@ -164,6 +179,7 @@ function checkAnswer(buttonIndex) {
   
   nextQuestion();
 }
+
 
 
 const modal = document.querySelector('#modal');
