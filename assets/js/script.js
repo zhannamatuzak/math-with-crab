@@ -38,6 +38,7 @@ function runMainScreen() {
   question.style.display = "none";
   cry.style.display = "none";
   happy.style.display = "none";
+  
 }
 
 /**
@@ -66,6 +67,9 @@ function checkUsername() {
     timeDisplay.style.display = "none";
     cry.style.display = "none";
     happy.style.display = "none";
+    document.getElementById("btn1").disabled = true;
+    document.getElementById("btn2").disabled = true;
+    document.getElementById("welcome").play();
   } else {
     errorMessage.style.display = "block";
     document.getElementById("user").focus();
@@ -81,10 +85,25 @@ checkUsername();
  * Timer variable constant for start/reset timer functions
  * It is global and can be used in startGame function 
  */
-let timeLeft = 10;
+let timeLeft = 31;
 let timerInterval;
 let correctAnswer = 0;
+let score = 0;
+let highScore = 0;
 timerSecondsshown = document.getElementById("timer-seconds");
+
+window.onload = function () {
+  let scoreFromBrowser = localStorage.setItem("high-score", highScore);
+  if (scoreFromBrowser != undefined) {
+    highScore = scoreFromBrowser;
+  }
+  else {
+
+  }
+  document.getElementById("high-score").innerHTML = "High Score: " + highScore;
+
+  
+}
 
 /**
  * When the start button is clicked, the function nextQuestion will be called and 
@@ -95,6 +114,8 @@ timerSecondsshown = document.getElementById("timer-seconds");
 function startGame() {
   timeDisplay.style.display = "block";
   startBtn.disabled = true;
+  document.getElementById("btn1").disabled = false;
+    document.getElementById("btn2").disabled = false;
   
   nextQuestion();
 
@@ -114,19 +135,20 @@ function startGame() {
 }
 const currentScore = document.getElementById("current-score");
 function resetGame() {
-  resetTimer();
-  startGame();; 
-  document.getElementById("btn1").disabled = false;
-  document.getElementById("btn2").disabled = false;
+  resetTimer(); 
+  startBtn.disabled = false;
+  document.getElementById("btn1").disabled = true;
+  document.getElementById("btn2").disabled = true;
+  document.getElementById("btn1").textContent = 'x',
+  document.getElementById("btn2").textContent = 'x',
   currentScore.textContent = 'Current Score: 0';
-  
+  operationField.textContent = '0 + 0';
 }
 
 function resetTimer() {
     clearInterval(timerInterval);
-    timeLeft = 10;
-    timerSecondsshown;
-    
+    timeLeft = 31;
+    timerSecondsshown.innerHTML = 0;
   }
 /**
  * The nextQuestion function will choose the random operation
@@ -176,7 +198,10 @@ function checkAnswer(buttonIndex) {
   }
   
   document.getElementById("current-score").innerHTML = "Current Score: " + score;
-  
+  if (score > highScore) highScore = score;
+  localStorage.setItem("high-score", highScore)
+  document.getElementById("high-score").innerHTML = "High Score: " + highScore;
+
   nextQuestion();
 }
 
