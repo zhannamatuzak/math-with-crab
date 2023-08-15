@@ -43,7 +43,8 @@ Marth with crab is a website game for children to practice adding numbers. In ad
     ![bug 2](/documentation/bag-two.png)
 
 - Problem 3:  The number of scores in the new game was added to the score number from the previous game.
-  - *Solution 3: const currentScore = document.getElementById("current-score"); was changed to global variable let.*
+  - *Solution 3: const currentScore = document.getElementById("current-score"); was changed to global variable let. Changed the value of score variable to 0 because it carried the score value from the previous game*
+
 
 #### **Unfixed Bugs**
 
@@ -79,7 +80,7 @@ Math with Crab was deployed onto GitHub Pages. Here are the steps to deploy this
 
   ![timer credit](/documentation/reset-timer.png)
 
-- Also, I watched the video tutorial from [Mr.Soderquist](https://www.youtube.com/channel/UCoL-30L7NMRNzwiHUqSYCVQ), which assisted me in how to set the timer and to check the answer.
+- Also, I watched the video tutorial from [Mr.Soderquist](https://www.youtube.com/channel/UCoL-30L7NMRNzwiHUqSYCVQ), which assisted me in how to set the timer and to check the answer and set the high score using Window localStorage Property.
 
 - The log in feature from the [project](https://aleksandracodes.github.io/CI_PP2_SunshineGuessing/index.html) of Aleksandra H. has inspired me. And I used it as a communication method between the crab, the game owner, and the user, who is a child. The crab want to learn more about the child so he asks him to write the name. The name is used then in the game field and in the rules modal window. 
 
@@ -112,7 +113,7 @@ Math with Crab was deployed onto GitHub Pages. Here are the steps to deploy this
 - [Font Awesome](https://fontawesome.com/) for icons
 - [Google Fonts](https://fonts.google.com/) for fonts
 - [Adobe Fresco](https://www.adobe.com/products/fresco.html) for image creation
-- [CSS animation](https://www.w3schools.com/css/css3_animations.asp) to style the logo image and logo title.
+- [CSS animation](https://www.w3schools.com/css/css3_animations.asp) to style the logo image, logo title and hourglass icon for time display.
 
 ## Wireframes
 ------

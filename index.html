@@ -67,9 +67,9 @@
       <!-- Area with the buttons: button to Start and button to Reset-->
       <div id="set-reset-btn">
         <!-- Start button -->
-        <button class="pink-btn" id="start-btn" onclick="startGame()">Start</button>
+        <button class="pink-btn" id="start-btn">Start</button>
         <!-- Reset button -->
-        <button id="new-game" class="pink-btn" onclick="resetGame()">Reset</button>
+        <button id="new-game" class="pink-btn">Reset</button>
       </div>
 
         <!-- Timer -->
@@ -97,8 +97,6 @@
           <source src="/assets/rain-drops.mp3">
           Your browser does not support the audio element.
       </audio>
-  
-      
     </div>
         
 
@@ -153,8 +151,12 @@
         <p class="instructions-element">See you in the game!</p> 
         <div id="logo">
           <img id="logo-image" src="assets/images/crab-logo.png" alt=""/>
+          <button id="audio-btn" class="btn__navigation--back">
+          <i id="off" class="fa-solid fa-volume-xmark" hidden></i>
+          <i id="on" class="fa-solid fa-volume-high" hidden></i>
+      </button>
         </div>
-        <audio id="welcome" controls muted>
+        <audio id="welcome">
           <source src="/assets/rules.mp3.mp3">
           Your browser does not support the audio element.
         </audio>

@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 /**
  * Wait for the DOM to filish loading befor running the game
  * Run the main screen with greeting and user (child) log-in
@@ -97,9 +99,9 @@ function checkUsername() {
 
   } else {
     errorMessage.style.display = "block";
-    document.getElementById("user").focus();
-    document.getElementById("user").value = "";
-    }
+    timeDisplay.style.display = "block";
+  }
+  
 }
 
 checkUsername();
@@ -110,6 +112,8 @@ checkUsername();
  * Setting interval: the time that is left decreases; for every second the time will be changed
  * 1000 milliseconds are between the seconds
  */
+document.getElementById("start-btn").addEventListener("click", startGame);
+
 function startGame() {
   timeDisplay.style.display = "block";
   startBtn.disabled = true;
@@ -128,13 +132,15 @@ function startGame() {
       document.getElementById("btn1").disabled = true;
       document.getElementById("btn2").disabled = true;
     }
-  }, 1000)
+  }, 1000);
 }
 
 /**
  * resetGame resets game screen and prepare for the next game. 
  * As well resetGame resets timer and score
  */
+document.getElementById("new-game").addEventListener("click", resetGame);
+
 function resetGame() {
   resetTimer(); 
   startBtn.disabled = false;
@@ -148,7 +154,6 @@ function resetGame() {
   currentScore.textContent = 'Current Score: 0';
   score = 0;
   operationField.textContent = '0 + 0';
-  
 }
 
 /**
@@ -190,7 +195,8 @@ function nextQuestion() {
 }
 
 /**
- * function that checks whether the result is correct
+ * checkAnswer checks whether the result is correct
+ * shows the current and high score
  */
 function checkAnswer(buttonIndex) {
   let answer = document.getElementById("btn" + buttonIndex).innerHTML;
@@ -205,9 +211,22 @@ function checkAnswer(buttonIndex) {
   }
   currentScore.innerHTML = "Current Score: " + score;
   if (score > highScore) highScore = score;
-  localStorage.setItem("high-score", highScore)
+  localStorage.setItem("high-score", highScore);
   document.getElementById("high-score").innerHTML = "High Score: " + highScore;
   nextQuestion();
+}
+
+/**
+ * Set the high score using Window localStorage Property
+ */
+window.onload = function () {
+  let scoreFromBrowser = localStorage.setItem("high-score", highScore);
+  if (scoreFromBrowser != undefined) {
+    highScore = scoreFromBrowser;
+  }
+  else {
+  }
+  document.getElementById("high-score").innerHTML = "High Score: " + highScore;
 }
 
 /** 
@@ -229,27 +248,13 @@ document.addEventListener('keydown', function (e) {
 });
 
 /**
- * Set the high score using Window localStorage Property
- */
-window.onload = function () {
-  let scoreFromBrowser = localStorage.setItem("high-score", highScore);
-  if (scoreFromBrowser != undefined) {
-    highScore = scoreFromBrowser;
-  }
-  else {
-  }
-  document.getElementById("high-score").innerHTML = "High Score: " + highScore;
-}
-
-
-/**
  * Open instructions modal window
  */
 function openModal() {
   modal.classList.remove('modal--hidden');
   overlay.classList.remove('overlay--hidden');
   document.getElementById("welcome").play().disabled = true;
-};
+}
 
 /**
  * Close instructions modal window
@@ -257,5 +262,26 @@ function openModal() {
 function closeModal () {
   modal.classList.add('modal--hidden');
   overlay.classList.add('overlay--hidden');
-};
+}
 
+let audioOn = false;
+let audion = document.getElementById("welcome");
+document.getElementById("audio-btn").addEventListener("click", function () {
+  if (audioOn) {
+    audio.pause();
+    // turn audio off - you need to add some funcionality here
+    // then you need to update your boolean
+    audioOn = false;
+    // update the icon
+    // do something here with the class hidden and it to one
+    document.getElementById("off").classList.add("hidden");
+    document.getElementById("on").classList.remove("hidden");
+  } else {
+    audio.play();
+    // turn audio on
+    audioOn = true;
+    document.getElementById("on").add("hidden");
+    document.getElementById("off").remove("hidden");
+    // update the icon
+  }
+});
