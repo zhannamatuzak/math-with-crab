@@ -10,9 +10,28 @@ Marth with crab is a website game for children to practice adding numbers. In ad
 - Create a high score using Window localStorage Property;
 - Add the heavy level to the game: catching the answers in the bubbles. The swimming bubbles already have the numbers on it.
 
-
+## Design
+------
 ## Testing
 ------
+### **Validator Testing**
+
+- **HTML**
+
+- **CSS**
+
+- **JS Hint**
+
+- **Lighthouse**
+
+### **Responsiveness**
+
+- The website is responsive to all devices within the ranges specified below.
+    - Pixel width :  - px
+    - Pixel width :  -px
+    - Pixel width :  - px
+    - Pixel width :  - px
+    - Pixel width : px and above
 
 ### **Bugs**
 
@@ -37,6 +56,15 @@ I used onclick Event on my buttons in my HTML file.
     
 - *Solution: Instead I used addEventListener() in js file, so the whole code is stored only in js file.*
 
+## Deployment
+------
+Math with Crab was deployed onto GitHub Pages. Here are the steps to deploy this website:
+
+- Within the repository name of the project (math-with-crab), go to the ***Settings*** tab
+- On the left hand menu, under ***Code and automation*** subtitle see ***Pages***
+- Under ***Build and deployment*** and ***Branch*** choose ***Main***, click Save.
+- This page will then refresh and the name of the website with live link will be available within a few minutes.
+- Find this link [here]()
 
 ## Credits 
 ------

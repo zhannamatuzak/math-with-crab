@@ -151,7 +151,7 @@ border-radius: 10px;
   box-shadow: 0 2px 5px rgba(255, 0, 130, 0.5);
   }
 
-  .pink-btn:hover {
+.pink-btn:hover {
   background-color:  rgb(255, 255, 255);
   color:#ff0081;
   box-shadow: 0 2px 5px rgba(255, 255, 255, 0.5);
