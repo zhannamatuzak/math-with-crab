@@ -2,9 +2,14 @@
 
 Marth with crab is a website game for children to practice adding numbers. In addition to it the user practices to type both the lowercase and uppercase letters. It is aimed at children between 6 and 8 years old. For children who are under this age adult assistance is required. This website hopes to make addition both fun and educational. The website is child-friendly to the ways it interacts with the user. You can visit the site [here](https://)
 
-![am i responsive]()
 
 ## Features 
+
+### **Potential Features**
+
+- Create a high score using Window localStorage Property;
+- Add the heavy level to the game: catching the answers in the bubbles. The swimming bubbles already have the numbers on it.
+
 
 ## Testing
 ------
@@ -15,7 +20,8 @@ Marth with crab is a website game for children to practice adding numbers. In ad
   - *Solution 1: span element was added to the interval.*
 
 - Problem 2: Beim clicking "submit-btn" without user varification, the button led to the game screen.
-  - *Solution 2: In the code in checkUsername function "," was used instead od "&&".* 
+  - *Solution 2: In the code in checkUsername function "," was used instead of "&&".*
+
     ![bug 2](/documentation/bag-two.png)
 
 - Problem 3:  The number of scores in the new game was added to the score number from the previous game.
@@ -25,8 +31,7 @@ Marth with crab is a website game for children to practice adding numbers. In ad
 
 - None
 
-## Mistakes
-------
+### Mistakes
 
 I used onclick Event on my buttons in my HTML file.
     
@@ -53,7 +58,7 @@ I used onclick Event on my buttons in my HTML file.
 
   ![User varification](/documentation/log-in-code.png)
 
-- To understand how to make a modal window I looked into the next projects which realise this feature in a different code manner: [Flash Cards](https://github.com/IuliiaKonovalova/flash_cards), and [Sunshine Guessing Game.](https://aleksandracodes.github.io/CI_PP2_SunshineGuessing/index.html)
+- To understand how to make a modal window I looked into the next projects which realise this feature in a different code manner: [Flash Cards](https://github.com/IuliiaKonovalova/flash_cards) and [Sunshine Guessing Game.](https://aleksandracodes.github.io/CI_PP2_SunshineGuessing/index.html)
 
 ### **Helpsheets and learning materials**
 
