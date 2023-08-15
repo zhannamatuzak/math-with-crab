@@ -19,6 +19,7 @@ let scoreArea = document.getElementById("score-area");
 let timeDisplay = document.getElementById("time-display");
 let question = document.getElementById("question");
 let happy = document.getElementById("happy");
+let submitBtn = document.getElementById("submit-btn");
 
 /**
  * Global variables to set timer and to check score and correct answer
@@ -65,7 +66,7 @@ document.getElementById("submit-btn").addEventListener("click", checkUsername);
 
 function checkUsername() {
   let username = document.getElementById("user").value.trim();
-  if (username.length >= 1 && username.length <= 10 && username[0] == username[0].toUpperCase()){
+  if (username.length >= 1 && username.length <= 10 && username == username.charAt(0).toUpperCase() + username.slice(1)){
     document.getElementById("child-name").innerText = username + ",";
     document.getElementById("child-name-rule").innerText = username + ",";
     greeting.style.display = "none";
@@ -83,6 +84,7 @@ function checkUsername() {
     document.getElementById("btn1").disabled = true;
     document.getElementById("btn2").disabled = true;
     document.getElementById("welcome").play();
+
   } else {
     errorMessage.style.display = "block";
     document.getElementById("user").focus();
