@@ -15,6 +15,9 @@ Marth with crab is a website game for children to practice adding numbers. In ad
     - *Solution 2: In the code in checkUsername function "," was used instead od "&&".* 
     ![bug 2](/documentation/bag-two.png)
 
+- Problem 3:  The number of scores in the new game was added to the score number from the previous game.
+    - *Solution 3: const currentScore = document.getElementById("current-score"); was changed to global variable let.*
+
 
 
 
