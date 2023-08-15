@@ -214,29 +214,25 @@ input[type=text] {
   height: 80px;
   font-size: 40px;
   margin: 10px;
-  color: gray;
-  background: #efefef;
+  color: #1b5771;
+  background: #07ed4c;
   border-radius: 100%;
   border: 1px solid gray;
   transition: 1s;
   outline: none;
-  -webkit-box-shadow: -2px 2px 10px 0px rgba(92,92,92,1);
-  -moz-box-shadow: -2px 2px 10px 0px rgba(92,92,92,1);
   box-shadow: -2px 2px 10px 0px rgba(92,92,92,1);
 }
 
 .answer-btn:hover {
-  background: #dadada;
-  transition: 1s;
+  background: #c8ddc8;
+  
 }
 
-.answer-btn:focus {
-  color: #00202e;
-  background: #dadada;
-  border: 1px solid black;
-  -webkit-box-shadow: inset -2px 2px 10px 0px rgba(92,92,92,1);
-  -moz-box-shadow: inset -2px 2px 10px 0px rgba(92,92,92,1);
-  box-shadow: inset -2px 2px 10px 0px rgba(92,92,92,1);
+.answer-btn:disabled {
+cursor: not-allowed;
+color: #44788e;;
+background-color: #77d793;
+box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
 }
 
 #time-display {

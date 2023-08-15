@@ -131,8 +131,7 @@ function startGame() {
     if (timeLeft == 0) {
       // Time stops changing after getting to 0
       clearInterval(timerInterval);
-      document.getElementById("btn1").disabled = true;
-      document.getElementById("btn2").disabled = true;
+      btnTrue()
     }
   }, 1000)
 }
@@ -143,8 +142,7 @@ function resetGame() {
   resetTimer(); 
   startBtn.disabled = false;
   newGame.disabled = true;
-  document.getElementById("btn1").disabled = true;
-  document.getElementById("btn2").disabled = true;
+  btnTrue()
   document.getElementById("btn1").textContent = 'x',
   document.getElementById("btn2").textContent = 'x',
   currentScore.textContent = 'Current Score: 0';
