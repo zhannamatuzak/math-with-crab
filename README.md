@@ -7,7 +7,6 @@ Marth with crab is a website game for children to practice adding numbers. In ad
 
 ### **Potential Features**
 
-- Create a high score using Window localStorage Property;
 - Add the heavy level to the game: catching the answers in the bubbles. The swimming bubbles already have the numbers on it.
 
 ## Design

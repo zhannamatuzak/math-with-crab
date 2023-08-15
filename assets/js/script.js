@@ -22,7 +22,6 @@ let happy = document.getElementById("happy");
 let cry = document.getElementById("cry");
 let submitBtn = document.getElementById("submit-btn");
 
-
 /**
  * Global variables to set timer and to check score and correct answer
  */
@@ -32,6 +31,8 @@ let correctAnswer = 0;
 let score = 0;
 let highScore = 0;
 let operationField = document.getElementById("operation");
+let currentScore = document.getElementById("current-score");
+let timerSecondsshown = document.getElementById("timer-seconds");
 
 /**
  * Block-scoped local variables for modal window
@@ -56,10 +57,14 @@ function btnTrue() {
   document.getElementById("btn2").disabled = true;
 }
 
+/** 
+ * Variable with an array elements
+ */
+let elementsToModify = [rules, gameSet, startBtn, newGame, scoreArea, childName, question];
+
 /**
 * Show the main screen with greeting and user (child) log-in
 */
-let elementsToModify = [rules, gameSet, startBtn, newGame, scoreArea, childName, question];
 function runMainScreen() {
   for (let el in elementsToModify) {
     elementsToModify[el].style.display = "none";
@@ -100,15 +105,6 @@ function checkUsername() {
 checkUsername();
 
 /**
- * Set up a variable for the timer.
- * 10 is the amount of seconds
- * Timer variable constant for start/reset timer functions
- * It is global and can be used in startGame function 
- */
-
-timerSecondsshown = document.getElementById("timer-seconds");
-
-/**
  * When the start button is clicked, the function nextQuestion will be called and 
  * The timer will be triggered to start and when it gets 0, the game stops
  * Setting interval: the time that is left decreases; for every second the time will be changed
@@ -120,9 +116,7 @@ function startGame() {
   newGame.disabled = false;
   document.getElementById("btn1").disabled = false;
   document.getElementById("btn2").disabled = false;
-  
   nextQuestion();
-
   timerInterval = setInterval(function () {
     // Time decrease for 1 second
     timeLeft -= 1;
@@ -131,32 +125,44 @@ function startGame() {
     if (timeLeft == 0) {
       // Time stops changing after getting to 0
       clearInterval(timerInterval);
-      btnTrue()
+      document.getElementById("btn1").disabled = true;
+      document.getElementById("btn2").disabled = true;
     }
   }, 1000)
 }
 
-let currentScore = document.getElementById("current-score");
-
+/**
+ * resetGame resets game screen and prepare for the next game. 
+ * As well resetGame resets timer and score
+ */
 function resetGame() {
   resetTimer(); 
   startBtn.disabled = false;
   newGame.disabled = true;
-  btnTrue()
+  cry.style.display = "none";
+  happy.style.display = "none";
+  document.getElementById("btn1").disabled = true;
+  document.getElementById("btn2").disabled = true;
   document.getElementById("btn1").textContent = 'x',
   document.getElementById("btn2").textContent = 'x',
   currentScore.textContent = 'Current Score: 0';
+  score = 0;
   operationField.textContent = '0 + 0';
+  
 }
 
+/**
+ * resetTimer resets timer
+ */
 function resetTimer() {
     clearInterval(timerInterval);
     timeLeft = 31;
     timerSecondsshown.innerHTML = 0;
-  }
+}
+  
 /**
  * The nextQuestion function will choose the random operation
- * And change the buttons to equal 4 addition results
+ * And change the buttons to equal 2 addition results
  * One of this results should be the correct answer
  */
 function nextQuestion() {
@@ -197,8 +203,10 @@ function checkAnswer(buttonIndex) {
     happy.style.display = "block";
     cry.style.display = "none";
   }
-  
-  document.getElementById("current-score").innerHTML = "Current Score: " + score;
+  currentScore.innerHTML = "Current Score: " + score;
+  if (score > highScore) highScore = score;
+  localStorage.setItem("high-score", highScore)
+  document.getElementById("high-score").innerHTML = "High Score: " + highScore;
   nextQuestion();
 }
 
@@ -221,6 +229,20 @@ document.addEventListener('keydown', function (e) {
 });
 
 /**
+ * Set the high score using Window localStorage Property
+ */
+window.onload = function () {
+  let scoreFromBrowser = localStorage.setItem("high-score", highScore);
+  if (scoreFromBrowser != undefined) {
+    highScore = scoreFromBrowser;
+  }
+  else {
+  }
+  document.getElementById("high-score").innerHTML = "High Score: " + highScore;
+}
+
+
+/**
  * Open instructions modal window
  */
 function openModal() {
@@ -236,3 +258,4 @@ function closeModal () {
   modal.classList.add('modal--hidden');
   overlay.classList.add('overlay--hidden');
 };
+

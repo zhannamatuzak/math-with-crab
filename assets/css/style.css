@@ -25,7 +25,7 @@
 }
 
 h2 {
-  color: #E11008; 
+  color: #00202e;; 
 }
 
 p {
@@ -136,7 +136,7 @@ border-radius: 10px;
 
 
 /* Add style to Play with me button and Start and Reset button */
-/* Code war taken and added from https://webdeasy.de/top-css-buttons/ */
+/* Code war taken and adopted from https://webdeasy.de/top-css-buttons/ */
 .pink-btn {
   font-family: 'Sans-Source-3', sans-serif;
   display: inline-block;
@@ -225,7 +225,6 @@ input[type=text] {
 
 .answer-btn:hover {
   background: #c8ddc8;
-  
 }
 
 .answer-btn:disabled {
