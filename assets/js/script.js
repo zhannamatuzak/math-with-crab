@@ -19,7 +19,9 @@ let scoreArea = document.getElementById("score-area");
 let timeDisplay = document.getElementById("time-display");
 let question = document.getElementById("question");
 let happy = document.getElementById("happy");
+let cry = document.getElementById("cry");
 let submitBtn = document.getElementById("submit-btn");
+
 
 /**
  * Global variables to set timer and to check score and correct answer
@@ -40,23 +42,33 @@ const overlay = document.querySelector('#overlay');
 const btnCloseModal = document.querySelector('#close-modal');
 
 /**
+ * Supportive functions to shorten the code length
+ */
+function errorsTimerEmoji() {
+  errorMessage.style.display = "none";
+  timeDisplay.style.display = "none";
+  cry.style.display = "none";
+  happy.style.display = "none";
+}
+
+function btnTrue() {
+  document.getElementById("btn1").disabled = true;
+  document.getElementById("btn2").disabled = true;
+}
+
+/**
 * Show the main screen with greeting and user (child) log-in
 */
+let elementsToModify = [rules, gameSet, startBtn, newGame, scoreArea, childName, question];
 function runMainScreen() {
+  for (let el in elementsToModify) {
+    elementsToModify[el].style.display = "none";
+  }
   greeting.style.display = "block";
-  errorMessage.style.display = "none";
-  rules.style.display = "none";
-  gameSet.style.display = "none";
-  startBtn.style.display = "none";
-  newGame.style.display = "none";
-  scoreArea.style.display = "none";
-  childName.style.display = "none";
-  timeDisplay.style.display = "none";
   document.getElementById("child-name").innerText = "";
   document.getElementById("user").focus();
   question.style.display = "none";
-  cry.style.display = "none";
-  happy.style.display = "none";
+  errorsTimerEmoji();
 }
 
 /**
@@ -70,19 +82,11 @@ function checkUsername() {
     document.getElementById("child-name").innerText = username + ",";
     document.getElementById("child-name-rule").innerText = username + ",";
     greeting.style.display = "none";
-    errorMessage.style.display = "none";
-    rules.style.display = "block";
-    gameSet.style.display = "block";
-    startBtn.style.display = "block";
-    newGame.style.display = "block";
-    scoreArea.style.display = "block";
-    childName.style.display = "block";
-    question.style.display = "block";
-    timeDisplay.style.display = "none";
-    cry.style.display = "none";
-    happy.style.display = "none";
-    document.getElementById("btn1").disabled = true;
-    document.getElementById("btn2").disabled = true;
+    for (let el in elementsToModify) {
+      elementsToModify[el].style.display = "block";
+    }
+    errorsTimerEmoji();
+    btnTrue();
     document.getElementById("welcome").play();
 
   } else {
@@ -182,7 +186,6 @@ function nextQuestion() {
  * function that checks whether the result is correct
  */
 function checkAnswer(buttonIndex) {
-  let cry = document.getElementById("cry");
   let answer = document.getElementById("btn" + buttonIndex).innerHTML;
   if (answer == correctAnswer) {
     score += 1;
