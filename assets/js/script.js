@@ -56,7 +56,6 @@ function runMainScreen() {
   question.style.display = "none";
   cry.style.display = "none";
   happy.style.display = "none";
-  
 }
 
 /**
@@ -102,16 +101,6 @@ checkUsername();
 
 timerSecondsshown = document.getElementById("timer-seconds");
 
-window.onload = function () {
-  let scoreFromBrowser = localStorage.setItem("high-score", highScore);
-  if (scoreFromBrowser != undefined) {
-    highScore = scoreFromBrowser;
-  }
-  else {
-  }
-  document.getElementById("high-score").innerHTML = "High Score: " + highScore;
-}
-
 /**
  * When the start button is clicked, the function nextQuestion will be called and 
  * The timer will be triggered to start and when it gets 0, the game stops
@@ -139,7 +128,9 @@ function startGame() {
     }
   }, 1000)
 }
-const currentScore = document.getElementById("current-score");
+
+let currentScore = document.getElementById("current-score");
+
 function resetGame() {
   resetTimer(); 
   startBtn.disabled = false;
@@ -202,10 +193,6 @@ function checkAnswer(buttonIndex) {
   }
   
   document.getElementById("current-score").innerHTML = "Current Score: " + score;
-  if (score > highScore) highScore = score;
-  localStorage.setItem("high-score", highScore)
-  document.getElementById("high-score").innerHTML = "High Score: " + highScore;
-
   nextQuestion();
 }
 
