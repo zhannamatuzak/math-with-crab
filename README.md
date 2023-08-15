@@ -53,30 +53,36 @@ I used onclick Event on my buttons in my HTML file.
 
   ![User varification](/documentation/log-in-code.png)
 
+- To understand how to make a modal window I looked into the next projects which realise this feature in a different code manner: [Flash Cards](https://github.com/IuliiaKonovalova/flash_cards), and [Sunshine Guessing Game.](https://aleksandracodes.github.io/CI_PP2_SunshineGuessing/index.html)
+
 ### **Helpsheets and learning materials**
 
 - Throughout the start of this website build I relied heavily on the tutorials from the Code Institute JavaScript Essentials part. I am very thankful to Anna Greaves, content developer of the Code Institute.
 
 - My mentor Juliia Konovalova assisted me throughout the project development. She helped me to understand how to improve the user experience of the project. Understanding the confusing Java Script syntax at the beginning of the project was not easy for me. Juliia cheered me up and motivated me to carry on. I appreaciate her contribution to my progress.
 
-### **Helpsheets and learning materials**
+- Chosing the design for the buttons I used the next two websites [Codepen](https://codepen.io/) and [Webdeasy.](https://webdeasy.de/top-css-buttons/?utm_content=cmp-true&fbclid=IwAR0_wlgRsKiVloPtwRA7IKqEeEYxZQ31WEMD4tyNR4oiWItjKSKOrfOLh4E)
 
-- [Chosing the design for the buttons I used this website](https://codepen.io/)
+- [How modal works](https://getbootstrap.com/docs/5.0/components/modal/#live-demo)
 
+- [Background CSS Water Effects](https://freefrontend.com/css-water-effects/)
 
 
 ### **Media**
-All Media was created and owned by the website author - Alfred Ayre.
+
+- [Crab logo image](https://pixabay.com/de/illustrations/krabbe-animation-musik-spielen-7918611/?fbclid=IwAR2OvWkPVaVlLdqZFJ0IVmyrboZSHhJ2SDaS9CNDwVkuklVTwmSalw0QMyo)
+
 
 ### **Technologies used**
-- [Favicon](https://www.favicon.cc/) Generator 
-- Image Converters
-    - [EZ Gif](https://ezgif.com/jpg-to-webp/)
-    - [Tiny Img](https://tiny-img.com/webp/)
+
+- [Favicon](https://favicon.io/favicon-converter/) Generator 
+- [Canva Pro](https://www.canva.com/) was used to edit images for documentation and for making Wireframes.
 - [Font Awesome](https://fontawesome.com/) for icons
 - [Google Fonts](https://fonts.google.com/) for fonts
 - [Adobe Fresco](https://www.adobe.com/products/fresco.html) for image creation
+- [CSS animation](https://www.w3schools.com/css/css3_animations.asp) to style the logo image and logo title.
 
 ## Wireframes
 ------
-![wireframe](assets/documentation-webp/wireframe-1.webp)
+![Wireframe](/documentation/set-wireframe.png)
+
