@@ -25,6 +25,14 @@ Marth with crab is a website game for children to practice adding numbers. In ad
 
 - None
 
+## Mistakes
+------
+
+I used onclick Event on my buttons in my HTML file.
+    
+- *Solution: Instead I used addEventListener() in js file, so the whole code is stored only in js file.*
+
+
 ### **Code**
 
 - [Juliia Konovalova](https://github.com/IuliiaKonovalova) helped me to shorten my code for better navigation experience.
