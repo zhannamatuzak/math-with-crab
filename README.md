@@ -37,7 +37,7 @@ I used onclick Event on my buttons in my HTML file.
 ------
 ### **Code**
 
-- [Juliia Konovalova](https://github.com/IuliiaKonovalova) helped me to shorten my code for better navigation experience.
+- [Juliia Konovalova](https://github.com/IuliiaKonovalova) explained me the ways I can shorten my code for better navigation experience.
 
   ![shorten the java script code](/documentation/shorten-code.png)
 
@@ -49,18 +49,20 @@ I used onclick Event on my buttons in my HTML file.
 
 - Also, I watched the video tutorial from [Mr.Soderquist](https://www.youtube.com/channel/UCoL-30L7NMRNzwiHUqSYCVQ), which assisted me in how to set the timer and to check the answer.
 
+- The log in feature from the [project](https://aleksandracodes.github.io/CI_PP2_SunshineGuessing/index.html) of Aleksandra H. has inspired me. And I used it as a communication method between the crab, the game owner, and the user, who is a child. The crab want to learn more about the child so he asks him to write the name. The name is used then in the game field and in the rules modal window. 
+
+  ![User varification](/documentation/log-in-code.png)
+
 ### **Helpsheets and learning materials**
 
 - Throughout the start of this website build I relied heavily on the tutorials from the Code Institute JavaScript Essentials part. I am very thankful to Anna Greaves, content developer of the Code Institute.
 
 - My mentor Juliia Konovalova assisted me throughout the project development. She helped me to understand how to improve the user experience of the project. Understanding the confusing Java Script syntax at the beginning of the project was not easy for me. Juliia cheered me up and motivated me to carry on. I appreaciate her contribution to my progress.
 
-- [Adding CSS Styles using JavaScript](https://www.javascripttutorial.net/dom/css/add-styles-to-an-element/)
-- [CSS Buttons](https://www.w3schools.com/css/css3_buttons.asp)
-- [Random Arrays in JavaScript](https://stackoverflow.com/questions/4550505/getting-a-random-value-from-a-javascript-array)
-- [setTimeout() Function](https://www.tutorialrepublic.com/javascript-tutorial/javascript-timers.php)
-- [More setTimeout() explanations](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout)
-- [Removing an attribute](https://www.w3schools.com/jsref/met_element_removeattribute.asp)
+### **Helpsheets and learning materials**
+
+- [Chosing the design for the buttons I used this website](https://codepen.io/)
+
 
 
 ### **Media**
