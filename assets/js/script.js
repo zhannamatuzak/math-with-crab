@@ -82,6 +82,7 @@ function checkUsername() {
     document.getElementById("child-name").innerText = username + ",";
     document.getElementById("child-name-rule").innerText = username + ",";
     greeting.style.display = "none";
+    newGame.disabled = true;
     for (let el in elementsToModify) {
       elementsToModify[el].style.display = "block";
     }
@@ -116,6 +117,7 @@ timerSecondsshown = document.getElementById("timer-seconds");
 function startGame() {
   timeDisplay.style.display = "block";
   startBtn.disabled = true;
+  newGame.disabled = false;
   document.getElementById("btn1").disabled = false;
   document.getElementById("btn2").disabled = false;
   
@@ -140,6 +142,7 @@ let currentScore = document.getElementById("current-score");
 function resetGame() {
   resetTimer(); 
   startBtn.disabled = false;
+  newGame.disabled = true;
   document.getElementById("btn1").disabled = true;
   document.getElementById("btn2").disabled = true;
   document.getElementById("btn1").textContent = 'x',

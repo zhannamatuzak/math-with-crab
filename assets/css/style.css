@@ -134,6 +134,7 @@ border-radius: 10px;
   padding: 5px 10px;
 }
 
+
 /* Add style to Play with me button and Start and Reset button */
 /* Code war taken and added from https://webdeasy.de/top-css-buttons/ */
 .pink-btn {
@@ -152,13 +153,16 @@ border-radius: 10px;
   }
 
 .pink-btn:hover {
-  background-color:  rgb(255, 255, 255);
-  color:#ff0081;
+  background-color: #ff00c1;
+  color: white;
   box-shadow: 0 2px 5px rgba(255, 255, 255, 0.5);
 }
 
 .pink-btn:disabled {
 cursor: not-allowed;
+color: white;
+background-color: #e09dd0;
+box-shadow: 0 2px 5px rgba(255, 255, 255, 0.5);
 }
 
 /* Define the position of Start and Reset buttons */
