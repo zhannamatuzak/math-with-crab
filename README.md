@@ -140,6 +140,12 @@ https://ui.dev/amiresponsive?url=https://zhannamatuzak.github.io/math-with-crab/
 
 - **Lighthouse**
 
+  - Testing the website with Lighthouse I received a Green Pass on all available classes.
+    - This first image is Lighthouse Testing desktop.
+    ![Lighthouse report desktop](documentation/lighthouse-mobile.png)
+    - This second image is Lighthouse Testing mobile.
+    ![Lighthouse report mobile](documentation/lighthouse-desktop.png)
+
 ### **Responsiveness**
 
 - The website is responsive to all devices within the ranges specified below.
