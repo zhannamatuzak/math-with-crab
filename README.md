@@ -10,7 +10,24 @@ Marth with crab is a website game for children to practice adding numbers. In ad
 - Add the heavy level to the game: catching the answers in the bubbles. The swimming bubbles already have the numbers on it.
 
 ## Design
-------
+
+- The Design for this website was inspired by my older son, who likes crabs and math. He is almost 4 and wants to learn adding numbers not only with the fingers. That is why I decided to make a game for him.
+- This inspired me to make an interactive game where crab speaks and play with a kid. The crab asks what the child's name is and reads rules for it. 
+- My son speaks two languages and likes to play with the words. I this game he can learn to type his name and pick a new one for fun.
+
+- The Irish Grover font I found in one article about game fonts. I used it for the game title. The Source Sns 3 was chosen for the text in the game. Both fonts are from Google Fonts. Oswald was also chosen but not used (it is my favourite font) because on my opinion it didn't suit this game.
+
+- The Colours throughout the website were chosen from the color paletter I found on [Colorkit](https://colorkit.co/palette/00202e-003f5c-2c4875-8a508f-bc5090-ff6361-ff8531-ffa600-ffd380/) website. The process of picking colors was the nex: I chose a color from this palette and then played with its shades.
+
+[Color palette](documentation/color-palette.png)
+
+- Four colors are main:
+   - Neon Rose.
+   - Radiant Hulk.
+   - Midnight Dreams.
+   - Bern Red (from the logo image).
+
+---
 ## Testing
 ------
 ### **Validator Testing**
@@ -74,17 +91,21 @@ Marth with crab is a website game for children to practice adding numbers. In ad
 - Problem 3:  The number of scores in the new game was added to the score number from the previous game.
   - *Solution 3: const currentScore = document.getElementById("current-score"); was changed to global variable let. Changed the value of score variable to 0 because it carried the score value from the previous game*
 
+- Problem 4:  The overlay for the modal window was placed at the right corner on the bottom of the website.
+  - *Solution 4: I forgot to add a closing tag to game area div.*
+   ![bug 4](/documentation/overlay-bag.png)
 
 #### **Unfixed Bugs**
 
-- None
+- none.
 
 ### Mistakes
 
 I used onclick Event on my buttons in my HTML file.
     
-- *Solution: Instead I used addEventListener() in js file, so the whole code is stored only in js file.*
+- *Solution: Instead I used addEventListener() in js file, so the whole code is stored only in js file. For two buttons I did not apply this solution for the reason it worked well in the complex function. But it is still not a good way to mix two different codes.*
 
+![Button index](/documentation/bag4.png)
 ## Deployment
 ------
 Math with Crab was deployed onto GitHub Pages. Here are the steps to deploy this website:
@@ -128,6 +149,8 @@ Math with Crab was deployed onto GitHub Pages. Here are the steps to deploy this
 - [How modal works](https://getbootstrap.com/docs/5.0/components/modal/#live-demo)
 
 - [Background CSS Water Effects](https://freefrontend.com/css-water-effects/)
+
+- [Adding Sound to Your JS Web App](https://noaheakin.medium.com/adding-sound-to-your-js-web-app-f6a0ca728984#:~:text=The%20simplest%20way%20to%20add,starts%20playing%20the%20current%20audio)
 
 
 ### **Media**
