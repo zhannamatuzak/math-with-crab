@@ -1,20 +1,20 @@
 # Math with Crab
 
-Marth with Crab is a website game for children to practice adding numbers. In addition to it the user practices to type both the lowercase and uppercase letters. It is aimed at children between 6 and 8 years old. For children who are under this age adult assistance is required. This website hopes to make addition both fun and educational. The website is child-friendly in the ways it interacts with the user. You can visit the site [here](https://ui.dev/amiresponsive?url=https://zhannamatuzak.github.io/math-with-crab/).
+Math with Crab is a website game for children to practice adding numbers. In addition to it the user practices to type both the lowercase and uppercase letters. It is aimed at children between 6 and 8 years old. For children who are under this age adult assistance is required. This website hopes to make addition both fun and educational. The website is child-friendly in the ways it interacts with the user. You can visit the site [here](https://ui.dev/amiresponsive?url=https://zhannamatuzak.github.io/math-with-crab/).
 
 ![am i responsive](documentation/responsive.png)
 
 ## Features 
 
-- Math with Crab Heading and Main Image
+- Math with Crab Heading and Logo
     - At the top of the page, the Math with Crab logo title and crab logo image immediately let the user know that they're on a Maths website for children that has a game to play. 
     - The hint message below tells the user that he can add numbers to ten.
     - The title has an animation the style of which I borrowed from this [project](https://aleksandracodes.github.io/CI_PP2_SunshineGuessing/index.html).
 
     ![Play with Math heading](documentation/header.png)
   
-- Greeting and Log in area
-    - The greeting text from Bob is presented at the main screen. Bob asks the user to type his name. This is where the user can input his name or imaginary name.
+- Greeting and Log-in area
+    - The greeting text from Bob is presented at the main screen. Bob asks the user to type his name. This is where the user can type his name or imaginary name.
 
     ![Greeting and Log-in](documentation/log-in.png) 
 
@@ -63,7 +63,7 @@ Marth with Crab is a website game for children to practice adding numbers. In ad
     ![Rules modal window](documentation/rules-modal.png)
 
  - Interaction: User name usage during the game
-   -The user provides his name at the beginning of the website. The information of the name is saved and used on the game area as well as on the rules modal window to make a friendly atmosphere for the user.
+   - The user provides his name at the beginning of the website. The information of the name is saved and used on the game area as well as on the rules modal window to make a friendly atmosphere for the user.
 
   ![User name usage](documentation/user-name.png)
 
