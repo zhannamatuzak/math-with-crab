@@ -228,7 +228,7 @@ window.onload = function () {
   else {
   }
   document.getElementById("high-score").innerHTML = "High Score: " + highScore;
-}
+};
 
 /** 
  * Open Instructions button

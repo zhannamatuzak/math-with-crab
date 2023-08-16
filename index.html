@@ -8,7 +8,7 @@
     content="Math with Crab is a guess game for kids aged 4-6 to learn adding numbers to 10.">
     <meta name="keywords"
     content=" Math, learn sum up, addition, count to 10, grammar quiz, kindergarten, preparation for scholl, math for primary school, kids">
-    <meta name="author" content="Zhanna Matuzak" />
+    <meta name="author" content="Zhanna Matuzak"/>
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -64,96 +64,93 @@
       <!-- Area where game starts -->
       <div id="game-set">
 
-      <!-- Area with the buttons: button to Start and button to Reset-->
-      <div id="set-reset-btn">
+        <!-- Area with the buttons: button to Start and button to Reset-->
+        <div id="set-reset-btn">
         <!-- Start button -->
-        <button class="pink-btn" id="start-btn">Start</button>
+          <button class="pink-btn" id="start-btn">Start</button>
         <!-- Reset button -->
-        <button id="new-game" class="pink-btn">Reset</button>
-      </div>
+          <button id="new-game" class="pink-btn">Reset</button>
+        </div>
 
         <!-- Timer -->
-      <p id="time-display">
-        <i id= "timer" class="fa-solid fa-hourglass-start"></i>
-        <span id="timer-seconds">45</span>
-      </p>
+        <p id="time-display">
+          <i id= "timer" class="fa-solid fa-hourglass-start"></i>
+          <span id="timer-seconds">45</span>
+        </p>
 
-      <!-- Question area-->
-      <p id="operation">0 + 0</p>
+        <!-- Question area-->
+        <p id="operation">0 + 0</p>
 
-      <!-- Area for 4 Buttons with answers -->
-      <button class="answer-btn" id="btn1" onclick="checkAnswer(1)">x</button>
-      <button class="answer-btn" id="btn2" onclick="checkAnswer(2)">x</button>
-      <br>
+        <!-- Area for 4 Buttons with answers -->
+        <button class="answer-btn" id="btn1" onclick="checkAnswer(1)">x</button>
+        <button class="answer-btn" id="btn2" onclick="checkAnswer(2)">x</button>
+        <br>
 
-      <!-- Score area -->
-      <div id="score-area">
-        <p id="current-score">Current Score: 0</p>
-        <p id="high-score">High Score: 0</p>
+        <!-- Score area -->
+        <div id="score-area">
+          <p id="current-score">Current Score: 0</p>
+          <p id="high-score">High Score: 0</p>
+        </div>
       </div>
-    
-        
-
       <!-- Bubbles animation for background -->
       <!-- Link to source website: https://codepen.io/codypearce/pen/VwYOGzq -->
-        <div class="bubble bubble--1">
-          <p class="number">2</p>
+      <div class="bubble bubble--1">
+        <p class="number">2</p>
+      </div>
+      <div class="bubble bubble--2"></div>
+      <div class="bubble bubble--3"></div>
+      <div class="bubble bubble--4">
+        <p class="number">5</p>
+      </div>
+      <div class="bubble bubble--5">
+        <p class="number">6</p>
+      </div>
+      <div class="bubble bubble--6">
+      </div>
+      <div class="bubble bubble--7">
+        <p class="number">9</p>
+      </div>
+      <div class="bubble bubble--8">
+        <p class="number">8</p>
+      </div>
+      <div class="bubble bubble--9">
+        <p class="number">3</p>
+      </div>
+      <div class="bubble bubble--10">
+        <p class="number">10</p>
+      </div>
+      <div class="bubble bubble--11">
+        <p class="number">4</p>
+      </div>
+      <div class="bubble bubble--12">
+        <p class="number">7</p>
         </div>
-        <div class="bubble bubble--2"></div>
-        <div class="bubble bubble--3"></div>
-        <div class="bubble bubble--4">
-          <p class="number">5</p>
-        </div>
-        <div class="bubble bubble--5">
-          <p class="number">6</p>
-        </div>
-        <div class="bubble bubble--6">
-        </div>
-        <div class="bubble bubble--7">
-          <p class="number">9</p>
-        </div>
-        <div class="bubble bubble--8">
-          <p class="number">8</p>
-        </div>
-        <div class="bubble bubble--9">
-          <p class="number">3</p>
-        </div>
-        <div class="bubble bubble--10">
-          <p class="number">10</p>
-        </div>
-        <div class="bubble bubble--11">
-          <p class="number">4</p>
-        </div>
-        <div class="bubble bubble--12">
-          <p class="number">7</p>
-        </div>
-        <div class="bubble bubble--13">
-          <p class="number">1</p>
-        </div>
+      <div class="bubble bubble--13">
+        <p class="number">1</p>
+      </div>
 
       <!-- Modal window for rules -->
-    <aside class="modal modal--hidden" id="modal">
-      <button class="close-modal" id="close-modal">&times;</button>
-      <div class="modal-instructions">
-        <h2 id="child-name-rule"></h2>
-        <p class="instructions-element">Click on the Start button if you want to play with me.</p>
-        <p class="instructions-element">You will see the addition of two numbers.</p>
-        <p class="instructions-element">I will give you 2 possible buttons answers.</p>
-        <p class="instructions-element">If you know the correct answer, click fast on it and carry on because the time goes!</p>
-        <p class="instructions-element">You will get no score and crying emoji if the answer is incorrect.</p>
-        <p class="instructions-element">If the answer is correct, the happy emoji appears and you will get a score.</p>
-        <p class="instructions-element">See you in the game!</p> 
-        <button id="audio-btn" class="btn__navigation--back">
-          <i id="off" class="fa-solid fa-volume-xmark"></i>
-          <i id="on" class="fa-solid fa-volume-high"></i>
-        </button>
-        <audio id="welcome" src="/assets/bob-speak.mp3">
-        Your browser does not support the audio element.
-        </audio>
-      </div>
-    </aside>
-    <div class="overlay overlay--hidden" id="overlay"></div>
-  
+      <aside class="modal modal--hidden" id="modal">
+        <button class="close-modal" id="close-modal">&times;</button>
+        <div class="modal-instructions">
+          <p id="child-name-rule"></p>
+          <p class="instructions-element">Click on the Start button if you want to play with me.</p>
+          <p class="instructions-element">You will see the addition of two numbers.</p>
+          <p class="instructions-element">I will give you 2 possible buttons answers.</p>
+          <p class="instructions-element">If you know the correct answer, click fast on it and carry on because the time goes!</p>
+          <p class="instructions-element">You will get no score and crying emoji if the answer is incorrect.</p>
+          <p class="instructions-element">If the answer is correct, the happy emoji appears and you will get a score.</p>
+          <p class="instructions-element">See you in the game!</p> 
+          <button id="audio-btn" class="btn__navigation--back">
+            <i id="off" class="fa-solid fa-volume-xmark"></i>
+            <i id="on" class="fa-solid fa-volume-high"></i>
+          </button>
+          <audio id="welcome" src="assets/bob-speak.mp3">
+          Your browser does not support the audio element.
+          </audio>
+        </div>
+      </aside>
+    </div>
     <!-- Link to FontAwesome icons -->
     <script src="https://kit.fontawesome.com/4bd19f25b4.js" crossorigin="anonymous"></script>
     <!-- Script to js file -->

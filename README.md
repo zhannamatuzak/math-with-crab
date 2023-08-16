@@ -15,6 +15,12 @@ Marth with crab is a website game for children to practice adding numbers. In ad
 ------
 ### **Validator Testing**
 
+- I checked the website for responsive design, accessibility and performance on desktop browsers:
+    - Chrome
+    - Firefox
+- I tested the website on Responsive viewer for mobile, tablet and desktop screens browser Chrome.
+- I tested also on my Samsung Galaxy phone chrome browser. The font was displayed very badly so it was not easy to read. So, I changed text elements from "Source-Sans-3', cursive" to "Sans-Source-3', sans-serif".
+
 - **HTML**
 
 - **CSS**
