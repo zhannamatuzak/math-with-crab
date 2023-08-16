@@ -5,6 +5,41 @@ Marth with crab is a website game for children to practice adding numbers. In ad
 
 ## Features 
 
+- Math with Crab Heading and Main Image
+    - At the top of the page, the Math with Crab logo title and crab logo image immediately let the user know that they're on a Maths website for children which has a game to play. 
+    - The hint message belov tells the user that he can add numbers to ten.
+    - The title has an animation the style of which I borroved from this [project](https://aleksandracodes.github.io/CI_PP2_SunshineGuessing/index.html).
+
+    ![Play with Math heading](documentation/header.png)
+  
+- Greeting and Log in area
+    - The greeting text from Bob is presented at the main screen. Bob asks for the user name (child) to type. The first letter should be capital. It needs some effort from the child.
+
+    - Test: I tested this featute on my son. He likes this part a lot because he can type everything he wants and the read this funny words which he see on the game area and modal window areas. After two days he can type his name easily.
+
+    ![Greeting and Log-in](documentation/log-in.png) 
+
+- The Game Area
+
+    - This is where the game will be played. It included multiple buttons: to start the game, reset the game, the game question, choose and submit their answer; operation area; and score area: current and high.
+    - Before the game starts, the only button which is enabled and clickable is the start button. This encourages the user to click the start button and engage with the game content.
+    - There is the rules button on the top right corner. The button is active before, during and after the game.
+
+    ![Game start](documentation/game-area.png)
+
+- Timer
+    - The timer is triggered by clicking the Start button and can be reset at any point after then with the Reset button.
+    - The Start button will be made disabled whilst the timer is running, so users cannot launch two timers at once. Two green answers buttons are active
+    - The Reset button is disabled until the start button is clicked and can be clicked anytime whilst the timer is running.
+    - Two green answer buttons are active when the timer is running.
+    - The timer interval is hidden from view until the Start button is clicked. At that point, the timer will start running and show below the Start and Reset buttons, next to the sandglass icon. The sandglass icon is on the screen all the time. It has swing animation.
+
+    ![timer](documentation/timer.png)
+
+
+- Equation Section
+  
+
 ### **Potential Features**
 
 - Add the heavy level to the game: catching the answers in the bubbles. The swimming bubbles already have the numbers on it.

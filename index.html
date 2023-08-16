@@ -50,7 +50,7 @@
         <p id="crab-text">Hi, I'm Bob.<br>What's your name?</p>
         <label for="user"></label>
         <input type="text" id="user" name="user" maxlength=10 placeholder="Type your name...">
-        <button data-type="" id="submit-btn" class="pink-btn">Play with me</button>
+        <button data-type="" id="submit-btn" class="pink-btn" aria-label="start and reset the game">Play with me</button>
       </div>
       
       <!-- Error messages for log-in-->
@@ -67,9 +67,9 @@
         <!-- Area with the buttons: button to Start and button to Reset-->
         <div id="set-reset-btn">
         <!-- Start button -->
-          <button class="pink-btn" id="start-btn">Start</button>
+          <button class="pink-btn" id="start-btn" aria-label="start the game">Start</button>
         <!-- Reset button -->
-          <button id="new-game" class="pink-btn">Reset</button>
+          <button id="new-game" class="pink-btn" aria-label="begin a new game">Reset</button>
         </div>
 
         <!-- Timer -->
@@ -82,8 +82,8 @@
         <p id="operation">0 + 0</p>
 
         <!-- Area for 4 Buttons with answers -->
-        <button class="answer-btn" id="btn1" onclick="checkAnswer(1)">x</button>
-        <button class="answer-btn" id="btn2" onclick="checkAnswer(2)">x</button>
+        <button class="answer-btn" id="btn1" aria-label="answer button1" onclick="checkAnswer(1)">x</button>
+        <button class="answer-btn" id="btn2" aria-label="answer button2" onclick="checkAnswer(2)">x</button>
         <br>
 
         <!-- Score area -->
@@ -142,7 +142,7 @@
           <p class="instructions-element">You will get no score and crying emoji if the answer is incorrect.</p>
           <p class="instructions-element">If the answer is correct, the happy emoji appears and you will get a score.</p>
           <p class="instructions-element">See you in the game!</p> 
-          <button id="audio-btn" class="btn__navigation--back">
+          <button id="audio-btn" class="btn__navigation--back" aria-label="read rules by Bob">
             <i id="off" class="fa-solid fa-volume-xmark"></i>
             <i id="on" class="fa-solid fa-volume-high"></i>
           </button>
