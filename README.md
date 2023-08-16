@@ -1,7 +1,9 @@
 # Math with Crab
 
-Marth with crab is a website game for children to practice adding numbers. In addition to it the user practices to type both the lowercase and uppercase letters. It is aimed at children between 6 and 8 years old. For children who are under this age adult assistance is required. This website hopes to make addition both fun and educational. The website is child-friendly to the ways it interacts with the user. You can visit the site [here](https://)
+Marth with crab is a website game for children to practice adding numbers. In addition to it the user practices to type both the lowercase and uppercase letters. It is aimed at children between 6 and 8 years old. For children who are under this age adult assistance is required. This website hopes to make addition both fun and educational. The website is child-friendly to the ways it interacts with the user. You can visit the site [here](https://ui.dev/amiresponsive?url=https://zhannamatuzak.github.io/math-with-crab/).
 
+![am i responsive](documentation/responsive.png)
+https://ui.dev/amiresponsive?url=https://zhannamatuzak.github.io/math-with-crab/
 
 ## Features 
 
@@ -13,11 +15,15 @@ Marth with crab is a website game for children to practice adding numbers. In ad
     ![Play with Math heading](documentation/header.png)
   
 - Greeting and Log in area
-    - The greeting text from Bob is presented at the main screen. Bob asks for the user name (child) to type. The first letter should be capital. It needs some effort from the child.
-
-    - Test: I tested this featute on my son. He likes this part a lot because he can type everything he wants and the read this funny words which he see on the game area and modal window areas. After two days he can type his name easily.
+    - The greeting text from Bob is presented at the main screen. Bob asks the user to type his name. This is where the user can input his name or imaginary name.
 
     ![Greeting and Log-in](documentation/log-in.png) 
+
+    - The first letter should be capital. And the number of letters must be to 10. It needs some effort from the user (child).
+
+    ![Error message](documentation/error-message.png) 
+
+    - Test: I tested this featute on my son. He likes this part a lot because he can type everything he wants and than read these funny words which he sees on the game area and modal window areas later on. It develops imagination. After two days he can type his name easily because he remembers where the letter are placed on the keyboard.
 
 - The Game Area
 
@@ -37,8 +43,36 @@ Marth with crab is a website game for children to practice adding numbers. In ad
     ![timer](documentation/timer.png)
 
 
-- Equation Section
+- Question area and Answer buttons
+   - This is where the easy addition is displayed when the start button is clicked. The two random numbers are selected by nextQuestion fuction.
+   - Two green round buttons change the color to light yellow when hovered. This provides the user good navigation and enables to react fast to the question.
   
+ ![Question area and Answer Buttons](documentation/guestion-answer.png)
+
+ - The Score Section
+    - The score will tally up the score of the player as they answer each correct answer.
+    - This section shows the current score that the user has. The game gives 1 point for every correctly answered question.
+    - The high score saves the number of points from the current game if it is higher than from the previous game.
+
+    ![Score](documentation/score-area.png)
+
+
+ - Rules Modal window
+    - The rules modal window consist of the user's name saved from the log-in area, the presentation of rules, audio icon with recorded rules. I recorded me as if Bob speaks to the user (child).
+    - If the audio off icon is clicked it turns to on icon. For the better user experience the audio does not autoplay untill the user decides so. To achieve it the Java Script Boolean was used.
+
+    ![Rules modal window](documentation/rules-modal.png)
+
+ - Interaction: User name usage during the game
+   -The user provides his name on the beginning of the website. The information of the name is saved and used on the game area as well as on the rules modal window to make a friendly atmosphere for the user.
+
+  ![User name usage](documentation/user-name.png)
+
+ - Interaction: Emoji as a reaction to correct and incorrect answer
+   - If the chosen answer is correct, the cool emoji appears; if the answer is wrong, crying emogy appears. This kind of interaction is very important for the child.
+  
+   ![User name usage](documentation/emoji.png)
+
 
 ### **Potential Features**
 
@@ -76,7 +110,7 @@ Marth with crab is a website game for children to practice adding numbers. In ad
 - **HTML**
    - No errors were found when checking the website with [W3C HTML Validator](https://validator.w3.org/) 
 
-     ![HTML Valid](documentation/html-validation.png)
+  ![HTML Valid](documentation/html-validation.png)
 
 - **CSS**
 
@@ -128,6 +162,7 @@ Marth with crab is a website game for children to practice adding numbers. In ad
 
 - Problem 4:  The overlay for the modal window was placed at the right corner on the bottom of the website.
   - *Solution 4: I forgot to add a closing tag to game area div.*
+
    ![bug 4](/documentation/overlay-bag.png)
 
 #### **Unfixed Bugs**
@@ -141,6 +176,7 @@ I used onclick Event on my buttons in my HTML file.
 - *Solution: Instead I used addEventListener() in js file, so the whole code is stored only in js file. For two buttons I did not apply this solution for the reason it worked well in the complex function. But it is still not a good way to mix two different codes.*
 
 ![Button index](/documentation/bag4.png)
+
 ## Deployment
 ------
 Math with Crab was deployed onto GitHub Pages. Here are the steps to deploy this website:
