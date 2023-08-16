@@ -95,7 +95,6 @@ function checkUsername() {
     }
     errorsTimerEmoji();
     btnTrue();
-    document.getElementById("welcome").play();
     document.getElementById("off").style.display = "none";
     document.getElementById("on").style.display = "block";
     
@@ -255,8 +254,7 @@ document.addEventListener('keydown', function (e) {
 function openModal() {
   modal.classList.remove('modal--hidden');
   overlay.classList.remove('overlay--hidden');
-  document.getElementById("welcome").play().disabled = true;
-}
+};
 
 /**
  * Close instructions modal window
@@ -264,11 +262,10 @@ function openModal() {
 function closeModal () {
   modal.classList.add('modal--hidden');
   overlay.classList.add('overlay--hidden');
-}
+};
 
 let audioOn = false;
 let myAudio = document.querySelector('#welcome');
-
 document.getElementById("audio-btn").addEventListener("click", function () {
   if (audioOn) {
     myAudio.pause();
@@ -286,6 +283,5 @@ document.getElementById("audio-btn").addEventListener("click", function () {
     // update the icon
     document.getElementById("off").style.display = "none";
     document.getElementById("on").style.display ="block";
-    
   }
 });

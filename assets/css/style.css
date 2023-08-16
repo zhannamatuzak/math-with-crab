@@ -12,8 +12,8 @@
 .ocean {
   position: relative;
   padding: 0;
-  margin: 0;
   overflow: hidden;
+  margin: 0;
   box-sizing: border-box;
   width: 100vw;
   height: 100vh;
@@ -62,21 +62,13 @@ padding: 5px 10px;
 /* Add style to logo image (crab) */
 /* Source link: https://pixabay.com/de/users/phananhdung80-22791542/ */
 img {
-  width: 80px;
-  height: 90px;
+  width: 70px;
+  height: 80px;
   margin: 25px 0 0 0;
 }
 
 .logo {
   position: relative;
-  animation: myfirst ease 5s;
-  animation-iteration-count: 1
-}
-
-@keyframes myfirst {
-  0%   {left:0px; top:0px;}
-  50%  {left:0px; top:10px;}
-  100% {left:0px; top:20px;}
 }
 
 /* Color gradient to header title */
@@ -116,7 +108,7 @@ img {
 #game-area {
 background-color: #B8B8B8;
 box-sizing: border-box;
-
+width: 30%;
 height: 65vh;
 max-height: 550px;
 max-width: 600px;
@@ -288,15 +280,6 @@ box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
   }
   100% {
     transform: translateY(-120vh);
-  }
-}
-
-@keyframes sideWays {
-  0% {
-    margin-left: 0px;
-  }
-  100% {
-    margin-left: 200px;
   }
 }
 
@@ -492,39 +475,23 @@ box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
   font-size: 90%;
 }
 
-
-
 /* Styling instruction*/
-.overlay {
-  height: 100vh;
-  width: 100vw;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(5px);
-  z-index: 5;
-}
-
-.overlay--hidden {
-  display: none;
-}
-
 .modal {
-  z-index: 10;
+  z-index: 5;
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -31%);
   width: 43rem;
-  height: 35rem;
+  height: 28rem;
   background-color: #B8B8B8;
   border-radius: var(--br);
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.7);
   border-radius: 20px;
-  padding: 25px;
-;
+  padding: 5px;
 }
 
 .close-modal {
@@ -542,9 +509,18 @@ box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
   display: none;
 }
 
+.overlay--hidden {
+  display: none;
+}
+
 .instructions-element {
   color: #00202e;
-  font-size: 120%;
+  font-size: 110%;
   font-weight: 400;
   margin: 15px;
+}
+
+.fa-solid {
+  font-size: 30px;
+  padding: 5px 10px;
 }
