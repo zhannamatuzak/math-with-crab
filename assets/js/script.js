@@ -268,6 +268,7 @@ function closeModal () {
 
 let audioOn = false;
 let myAudio = document.querySelector('#welcome');
+
 document.getElementById("audio-btn").addEventListener("click", function () {
   if (audioOn) {
     myAudio.pause();
