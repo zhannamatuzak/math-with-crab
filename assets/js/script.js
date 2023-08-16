@@ -253,6 +253,7 @@ document.addEventListener('keydown', function (e) {
  */
 function openModal() {
   modal.classList.remove('modal--hidden');
+  overlay.classList.remove('overlay--hidden');
 }
 
 /**
@@ -260,6 +261,7 @@ function openModal() {
  */
 function closeModal () {
   modal.classList.add('modal--hidden');
+  overlay.classList.add('overlay--hidden');
 }
 
 let audioOn = false;

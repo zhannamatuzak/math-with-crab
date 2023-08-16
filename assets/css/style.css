@@ -476,14 +476,14 @@ box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
 
 /* Styling instruction*/
 .modal {
-  z-index: 5;
+  z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -31%);
+  transform: translate(-50%, -50%);
   width: 43rem;
   height: 28rem;
   background-color: #B8B8B8;
@@ -509,6 +509,18 @@ box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
   display: none;
 }
 
+.overlay {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  z-index: 5;
+}
+
+.overlay--hidden {
+  display: none;
+}
 .instructions-element {
   color: #00202e;
   font-size: 110%;
