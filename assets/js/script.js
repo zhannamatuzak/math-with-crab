@@ -96,7 +96,9 @@ function checkUsername() {
     errorsTimerEmoji();
     btnTrue();
     document.getElementById("welcome").play();
-
+    document.getElementById("off").style.display = "none";
+    document.getElementById("on").style.display = "block";
+    
   } else {
     errorMessage.style.display = "block";
     timeDisplay.style.display = "block";
@@ -265,23 +267,24 @@ function closeModal () {
 }
 
 let audioOn = false;
-let audion = document.getElementById("welcome");
+let myAudio = document.querySelector('#welcome');
 document.getElementById("audio-btn").addEventListener("click", function () {
   if (audioOn) {
-    audio.pause();
+    myAudio.pause();
     // turn audio off - you need to add some funcionality here
     // then you need to update your boolean
     audioOn = false;
     // update the icon
     // do something here with the class hidden and it to one
-    document.getElementById("off").classList.add("hidden");
-    document.getElementById("on").classList.remove("hidden");
+    document.getElementById("off").style.display = "block";
+    document.getElementById("on").style.display ="none";
   } else {
-    audio.play();
+    myAudio.play();
     // turn audio on
     audioOn = true;
-    document.getElementById("on").add("hidden");
-    document.getElementById("off").remove("hidden");
     // update the icon
+    document.getElementById("off").style.display = "none";
+    document.getElementById("on").style.display ="block";
+    
   }
 });
