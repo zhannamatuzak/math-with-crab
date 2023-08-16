@@ -108,7 +108,7 @@ img {
 #game-area {
 background-color: #B8B8B8;
 box-sizing: border-box;
-width: 30%;
+width: 50vw;
 height: 65vh;
 max-height: 550px;
 max-width: 600px;
@@ -125,7 +125,6 @@ border-radius: 10px;
   font-weight: 400;
   padding: 5px 10px;
 }
-
 
 /* Add style to Play with me button and Start and Reset button */
 /* Code war taken and adopted from https://webdeasy.de/top-css-buttons/ */
@@ -503,6 +502,7 @@ box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
   cursor: pointer;
   border: none;
   background: none;
+  color: #F40B0B;
 }
 
 .modal--hidden {
@@ -523,4 +523,59 @@ box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
 .fa-solid {
   font-size: 30px;
   padding: 5px 10px;
+  color: #F40B0B;
+}
+
+/* Media */
+/* Media for screen sizes from 1200px wide and down */
+@media screen and (max-width: 823px) {
+
+  #game-area{
+    width: 400px;
+    height: 500px;
+  }
+
+  .modal {
+    width: 26rem;
+    height: 22rem;
+  }
+
+  .instructions-element {
+  color: #00202e;
+  font-size: 70%;
+  font-weight: 400;
+  margin: 10px;
+}
+
+.close-modal {
+  font-size: 2rem;
+}
+
+.fa-solid {
+  font-size: 20px;
+}
+
+#question {
+    font-size: 120%;
+    font-weight: 400;
+    margin: 5px auto 5px auto;
+}
+}
+
+@media screen and (max-width: 481px) {
+  #game-area{
+    width: 320px;
+    height: 430px;
+  }
+
+  .modal {
+    width: 21rem;
+    height: 22rem;
+  }
+
+  #question {
+    font-size: 100%;
+    font-weight: 400;
+    margin: 5px auto 5px auto;
+}
 }
