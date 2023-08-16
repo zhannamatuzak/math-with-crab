@@ -28,6 +28,10 @@ Marth with crab is a website game for children to practice adding numbers. In ad
 
 - **CSS**
 
+ - No errors were found when checking the website with [W3C CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator/) 
+
+    ![CSS Valid](documentation/css-validation.png)
+
 - **JS Hint**
 
 - No errors were found when checking the JavaScript code using the [JS Hint](https://jshint.com/)
@@ -44,6 +48,7 @@ Marth with crab is a website game for children to practice adding numbers. In ad
          Here I used this code for the same need.
       - Line 155:	expected an assignment or function call and instead saw an expression.
         I cannot find the solution to this warning.
+
     ![JS Hint warnings](documentation/test-js.png)
     - It was found two unused variables: line 25	submitBtn and line 206 checkAnswer. Indeed I did not use this variable. So, I deleted it. The second one is used in the function.
 
@@ -52,11 +57,9 @@ Marth with crab is a website game for children to practice adding numbers. In ad
 ### **Responsiveness**
 
 - The website is responsive to all devices within the ranges specified below.
-    - Pixel width :  - px
-    - Pixel width :  -px
-    - Pixel width :  - px
-    - Pixel width :  - px
-    - Pixel width : px and above
+    - Pixel width :  481 - 823px
+    - Pixel width :  481px wide and down
+
 
 ### **Bugs**
 
