@@ -22,10 +22,30 @@ Marth with crab is a website game for children to practice adding numbers. In ad
 - I tested also on my Samsung Galaxy phone chrome browser. The font was displayed very badly so it was not easy to read. So, I changed text elements from "Source-Sans-3', cursive" to "Sans-Source-3', sans-serif".
 
 - **HTML**
+   - No errors were found when checking the website with [W3C HTML Validator](https://validator.w3.org/) 
+
+     ![HTML Valid](documentation/html-validation.png)
 
 - **CSS**
 
 - **JS Hint**
+
+- No errors were found when checking the JavaScript code using the [JS Hint](https://jshint.com/)
+    - The metrics were as follows 
+        - There are 16 functions in this file.
+        - Function with the largest signature take 1 arguments, while the median is 0.
+        - Largest function has 14 statements in it, while the median is 5.
+        - The most complex function has a cyclomatic complexity value of 5 while the median is 1.5.
+    - When testing my JavaScript with JS Hint, there were originally 41 warnings associated with it, however these disappeared when I added a section of code `/*jshint esversion: 6 */`  at the top of the document. This recommendation I have found in README.md file of [Alfred](https://github.com/AlfredA93) and it worked for me too.
+    - When I added `/*jshint esversion: 6 */` it was tree warnings left:
+      - Line 71: he body of a for in should be wrapped in an if statement to filter unwanted properties from the prototype. 
+        - The above code I to shorten the length of my code. 
+      - Line 93: the body of a for in should be wrapped in an if statement to filter unwanted properties from the prototype.
+         Here I used this code for the same need.
+      - Line 155:	expected an assignment or function call and instead saw an expression.
+        I cannot find the solution to this warning.
+    ![JS Hint warnings](documentation/test-js.png)
+    - It was found two unused variables: line 25	submitBtn and line 206 checkAnswer. Indeed I did not use this variable. So, I deleted it. The second one is used in the function.
 
 - **Lighthouse**
 

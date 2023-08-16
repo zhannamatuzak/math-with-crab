@@ -8,6 +8,7 @@
   box-sizing: border-box;
   overflow: hidden !important;
 }
+
 /* Add style to the body, which is ocean in this game */
 .ocean {
   position: relative;
@@ -23,6 +24,8 @@
   text-align: center;
   font-family: 'Source-Sans-3', cursive;
 }
+
+/* Style for elements with text*/
 
 p {
   font-size: 100%;
@@ -53,6 +56,10 @@ p {
 font-size: 100%;
 font-weight: 400;
 padding: 5px 10px;
+}
+
+.score-area {
+  font-family: 'Sans-Source-3', sans-serif;
 }
 
 /* Add style to logo image (crab) */
@@ -170,6 +177,8 @@ box-shadow: 0 2px 5px rgba(255, 255, 255, 0.5);
   float: right;
 }
 
+/* Emoji feedback to the answers*/
+
 #cry, #happy {
   float: left;
   font-size: 200%;
@@ -218,11 +227,15 @@ background-color: #77d793;
 box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
 }
 
+/* Timer*/
+
 #time-display {
   font-size: 100%;
   font-weight: 400;
   padding: 5px 10px;
 }
+
+/* Operation for the game */
 
 #operation {
   font-size: 250%;
@@ -283,10 +296,6 @@ box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
   color: #E11008;
   padding: 5px 5px;
 	animation: hourglass 10s cubic-bezier(.36,.07,.57,.99) infinite;
-}
-
-.score-area {
-  font-family: 'Sans-Source-3', sans-serif;
 }
 
 @keyframes hourglass {
@@ -535,7 +544,8 @@ box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
 }
 
 /* Media */
-/* Media for screen sizes from 1200px wide and down */
+/* Media for screen sizes from 823px wide and down */
+
 @media screen and (max-width: 823px) {
 
   #game-area{
@@ -576,6 +586,8 @@ box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
 }
 
 }
+
+/* Media for screen sizes from 481px wide and down */
 
 @media screen and (max-width: 481px) {
   #game-area{

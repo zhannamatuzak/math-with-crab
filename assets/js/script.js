@@ -22,7 +22,6 @@ let timeDisplay = document.getElementById("time-display");
 let question = document.getElementById("question");
 let happy = document.getElementById("happy");
 let cry = document.getElementById("cry");
-let submitBtn = document.getElementById("submit-btn");
 
 /**
  * Global variables to set timer and to check score and correct answer
