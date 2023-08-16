@@ -1,6 +1,6 @@
 # Math with Crab
 
-Math with Crab is a website game for children to practice adding numbers. In addition to it the user practices to type both the lowercase and uppercase letters. It is aimed at children between 6 and 8 years old. For children who are under this age adult assistance is required. This website hopes to make addition both fun and educational. The website is child-friendly in the ways it interacts with the user. You can visit the site [here](https://ui.dev/amiresponsive?url=https://zhannamatuzak.github.io/math-with-crab/).
+Math with Crab is a website game for children to practice adding numbers. In addition to it the user practices to type both the lowercase and uppercase letters. It is aimed at children between 6 and 8 years old. For children who are under this age adult assistance is required. This website hopes to make addition both fun and educational. The website is child-friendly in the ways it interacts with the user. You can visit the site [here](https://zhannamatuzak.github.io/math-with-crab/).
 
 ![am i responsive](documentation/responsive.png)
 
