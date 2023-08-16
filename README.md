@@ -18,7 +18,7 @@ Math with Crab is a website game for children to practice adding numbers. In add
 
     ![Greeting and Log-in](documentation/log-in.png) 
 
-    - The first letter should be capitalized. And the number of letters must be 10 or less. It needs some effort from the user (child).
+    - The first letter should be capitalized. And the number of letters must be 10 or less. It needs some effort from the user (child). If the criteria are ignored, the error message pops up with the list of criteria. The criteria are standard.
 
     ![Error message](documentation/error-message.png) 
 
