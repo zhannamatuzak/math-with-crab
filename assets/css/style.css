@@ -168,15 +168,15 @@ box-shadow: 0 2px 5px rgba(255, 255, 255, 0.5);
 
 /* Add style to rules button */
 #rules-btn {
-  font-size: 200%;
-  font-weight: 400;
   padding: 5px 10px;
   border: none;
   background-color: #B8B8B8;
-  color: #00202e;
   float: right;
 }
 
+#icon-rule{
+  font-size: 30px;
+}
 /* Emoji feedback to the answers*/
 
 #cry, #happy {
@@ -228,7 +228,6 @@ box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
 }
 
 /* Timer*/
-
 #time-display {
   font-size: 100%;
   font-weight: 400;
@@ -537,11 +536,23 @@ box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
 }
 
 .fa-solid {
-  font-size: 30px;
+  font-size: 20px;
   padding: 5px 10px;
   color: #F40B0B;
 }
 
+#audio-btn{
+  border: none;
+  background-color: #B8B8B8;
+}
+
+#off{
+  font-size: 35px;
+}
+
+#on{
+  font-size: 35px;
+}
 /* Media */
 /* Media for screen sizes from 823px wide and down */
 
@@ -569,7 +580,7 @@ box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
 }
 
 .fa-solid {
-  font-size: 20px;
+  font-size: 15px;
 }
 
 #question {
@@ -610,4 +621,9 @@ box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
   font-weight: 400;
   margin-top: 30px;
 }
+
+.fa-solid {
+  font-size: 12px;
+}
+
 }
