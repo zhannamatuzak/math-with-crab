@@ -290,11 +290,6 @@ box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
   }
 }
 
-.fa-hourglass-start {
-  color: #E11008;
-  padding: 5px 5px;
-	animation: hourglass 10s cubic-bezier(.36,.07,.57,.99) infinite;
-}
 
 @keyframes hourglass {
 	0% {

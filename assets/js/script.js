@@ -263,23 +263,22 @@ function closeModal () {
   overlay.classList.add('overlay--hidden');
 }
 
+/** 
+ * Setting audio the on rule modal window
+ * it plays when the user clicks on and it stops when the user clicks again
+ * The on icon switches to off and wise versa
+*/
 let audioOn = false;
 let myAudio = document.querySelector('#welcome');
 document.getElementById("audio-btn").addEventListener("click", function () {
   if (audioOn) {
     myAudio.pause();
-    // turn audio off - you need to add some funcionality here
-    // then you need to update your boolean
     audioOn = false;
-    // update the icon
-    // do something here with the class hidden and it to one
     document.getElementById("off").style.display = "block";
     document.getElementById("on").style.display ="none";
   } else {
     myAudio.play();
-    // turn audio on
     audioOn = true;
-    // update the icon
     document.getElementById("off").style.display = "none";
     document.getElementById("on").style.display ="block";
   }
